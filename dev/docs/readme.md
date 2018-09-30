@@ -2,36 +2,36 @@
 
 ### Outline
 
-- [Brief](#Brief)
-  - [Audience](#Audience)
-  - [Problem](#Problem)
-  - [Solution](#Solution)
-  - [Unique Value Proposition](#Unique-Value-Proposition)
-  - [Pitch](#Pitch)
-- [Spec](#Spec)
+- [Brief](#brief)
+  - [Audience](#audience)
+  - [Problem](#problem)
+  - [Solution](#solution)
+  - [Unique Value Proposition](#unique-value-proposition)
+  - [Pitch](#pitch)
+- [Spec](#spec)
 
-  - [Feature Definitions](#Feature-Definitions)
-  - [Sitemap](#Sitemap)
-  - [Interface](#Interface)
-    - [Information Architecture](#Information-Architecture)
-    - [Browser Support](#Browser-Support)
-  - [Infrastructure](#Infrastructure)
-    - [Technical Requirements](#Technical-Requirements)
-    - [Programming Languages](#Programming-Languages)
-    - [Integrations](#Integrations)
-    - [Deployment Workflow](#Deployment-Workflow)
-    - [Web Host](#Web-Host)
+  - [Feature Definitions](#feature-definitions)
+  - [Sitemap](#sitemap)
+  - [Interface](#interface)
+    - [Information Architecture](#information-architecture)
+    - [Browser Support](#browser-support)
+  - [Infrastructure](#infrastructure)
+    - [Technical Requirements](#technical-requirements)
+    - [Programming Languages](#programming-languages)
+    - [Integrations](#integrations)
+    - [Deployment Workflow](#deployment-workflow)
+    - [Web Host](#web-host)
 
-- [Project Milestones](#Project-Milestones)
-  - [Initial Pitch](#Initial-Pitch)
-  - [Initial Project Spec](#Initial-Project-Spec)
-  - [MVP](#MVP)
-  - [Pivot](#Pivot)
-  - [Alpha Release](#Alpha-Release)
-  - [Beta Release](#Beta-Release)
-  - [Public Release](#Public-Release)
+- [Project Milestones](#project-milestones)
+  - [Initial Pitch](#initial-pitch)
+  - [Initial Project Spec](#initial-project-spec)
+  - [MVP](#mvp)
+  - [Pivot](#pivot)
+  - [Alpha Release](#alpha-release)
+  - [Beta Release](#beta-release)
+  - [Public Release](#public-release)
 
-### Brief
+## Brief
 
 ---
 
