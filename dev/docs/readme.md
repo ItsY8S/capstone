@@ -1,14 +1,6 @@
 # Project Spec
 
-The project spec should be a series of three markdown files contained within your repo in a folder on the root level labeled docs with a table of contents `./docs/readme.md` linking each major article (Brief, Spec, Project Milestones) to its proper section within each corresponding file. Each document should employ markdown formatting and good informational hierarchy techniques to convey their contents effectively.
-
-## Requirements
-
-The listed pre-requisites for this milestone are required for evaluation. Failure to have completed the pre-requisites will result in a zero for this milestone. Please refer to the class's late policy regarding exceptions and late work.
-
-Below is the Project Spec Outline and definitions of each component that is required.
-
-### Project Spec Outline
+### Outline
 
 - [Brief](#Brief)
   - [Audience](#Audience)
@@ -47,23 +39,27 @@ The Brief is an executive summary of all elements listed within. This should boi
 
 ### Audience
 
-Define the primary audience and any secondary markets. The more specific the better. You should be defining the age, gender, education level, social background, level of familiarity with technology, and any other relevant and defining characteristics of the audiences for which you are intending to building your application.
+- 16-30 year old male artists
+- Some college experience, possibly dropped to pursue music
+- Solo or small team
+- 10,000+ fans & social media following
+- Low technical experience / patience / time
+- Looking for new source of income
+- No website or possibly too complex
 
-Identify any members of these audiences you have had contact with, any interview notes or feedback summaries and a breakdown of considerations they have influenced.
+This is influenced by watching this type of market on Instagram. I also have experience talking to artists in this range and a lot of them just don't know where to start, but are interested in selling clothes and other merchandise.
 
 ### Problem
 
-Clearly define the problem your audience is having. Cite any feedback from interviews with your audience.
+Music artists just want make music. They quickly find out there's more to it than making music. From photography, designs, a website, music videos, mixing, mastering, & more, it's a lot to juggle. Websites like Shopify can be intimidating, especially for somebody without technical experience.
 
 ### Solution
 
-Identify any competition operating in this market space and summarize how they are addressing the problem, as defined.
-
-Define your solution and how it will directly address the problem your audience is having.
+Shopify provides good documentation and help all over. Big Cartel is good at getting straight to the point and getting set up. I want to find a good balance and add some of my own features. My number one goal is to make it easy to use. One of my selling points will be tour exclusive items. 
 
 ### Unique Value Proposition
 
-What separates you from the competition? How are you able to better solve this defined problem for your audience than your competition? Why is your idea smarter, more efficient, or better?
+Connecting with artists on Instagram will hit a specific market that those websites aren't hitting. I have experience and knowledge among this market as I've helped a friend in the music industry. Selling exclusive items on tour is also something I haven't seen done on a website. By keeping a consistent theme, I will build my brand as a trustworthly application.
 
 ### Pitch
 
@@ -103,7 +99,7 @@ Using your sitemap as a base structure, use this section to house ALL of your te
 
 ### Browser Support
 
-Which browsers, operating systems, devices, portrait and landscape modes do you plan to support? How did you come to this decision and what are the technical specification resolutions of these devices?
+I would like to support all current browsers and IE11+. Older versions have a less than 1% usage rate. I will use something such as [autoprefixer](https://github.com/postcss/autoprefixer). Portrait mode will be supported on smaller devices such as phones, with landscape potentially coming later. There is a minimum requirement of 320px width.
 
 ### Infrastructure
 
@@ -122,19 +118,23 @@ Define the server software and hardware, virtualized or not, that your applicati
 
 ### Programming Languages
 
-Identify what programming languages you are using. Provide links to their respective documentation sites.
+- [Node.js](https://nodejs.org/)
+- [React.js](https://reactjs.org/)
 
 ### Integrations
 
-Identify what 3rd party packages, libraries, or external integrations you are using. Provide links to their respective documentation sites.
+- [Skeleton](https://getskeleton.com/) as CSS library
+- [Multer](https://github.com/expressjs/multer), [UUID](https://github.com/kelektiv/node-uuid), & [Jimp](https://github.com/oliver-moran/jimp) for image uploading & resizing 
+- [MongoDB](https://github.com/mongodb/mongo) with [Mongoose](https://github.com/Automattic/mongoose)
+- [Express Generator](https://expressjs.com/en/starter/generator.html)
 
 ### Deployment Workflow
 
-Document the release process for your application from new feature creation through live deployment. This will be heavily focused on this week's research.
+I will be creating new issues for features labeled as 'enhancements'. As I complete the features, I will mark them as completed. At the end of the week, I create a pull request. I'll be using [GitHub Pages](https://pages.github.com/) to host my application. I will use the command `npm run deploy`.
 
 ### Web Host
 
-Define what hosting service provider you will be utilizing and identify the accessible urls of any live or staging servers for review.
+[GitHub Pages](https://pages.github.com/)
 
 ### Project Milestones
 
