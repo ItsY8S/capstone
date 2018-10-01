@@ -146,7 +146,8 @@ Similar to the Spec section, this is a container section that separates section 
 
 ### Initial Pitch
 
-Link to your initial Pitch Video or presentation(with notes).
+[Initial Pitch](https://youtu.be/FSYz_EMQmvU)
+I found some things about my application that I wasn't even thinking about. Some things such as adding a tour date completely went over my head as a designer / developer. It was good getting feedback and talking through the vision of my project.
 
 ### Initial Project Spec
 
