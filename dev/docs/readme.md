@@ -35,6 +35,8 @@
 
 ---
 
+Artist Store targets young artists that want to quickly get a store up and running without much technical knowledge. It makes it easy to add your products, and set tour exclusive merchandise. To be continued...
+
 The Brief is an executive summary of all elements listed within. This should boil down to one long paragraph, devoting one to two sentences to each of the sub-sections defined.
 
 ### Audience
