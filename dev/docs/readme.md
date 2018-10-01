@@ -65,15 +65,7 @@ Connecting with artists on Instagram will hit a specific market that those websi
 
 ### Pitch
 
-Rehash your initial pitch content but incorporate all of your research and lessons learned with the MVP. This should be a short 1 - 3 min video (post it to Youtube, set as unlisted and link it in your docs). The audience for this should be expected to have no context of your previous pitch (like a potential employer), so make certain to include all the basic information:
-
-- Identify Who You Are
-- Identify Your **Primary Audience**
-- Discuss **The Defined Problem** They Are Having
-- **Propose A Solution** To This Problem
-- Identify Your **Unique Value Proposition**
-
-Don't speak down to your pitch's audience, but assume limited technical knowledge when explaining your concepts.
+[Pitch](https://youtu.be/Na9JcUb7zbY)
 
 ### Spec
 
@@ -147,6 +139,7 @@ Similar to the Spec section, this is a container section that separates section 
 ### Initial Pitch
 
 [Initial Pitch](https://youtu.be/FSYz_EMQmvU)
+
 I found some things about my application that I wasn't even thinking about. Some things such as adding a tour date completely went over my head as a designer / developer. It was good getting feedback and talking through the vision of my project.
 
 ### Initial Project Spec
