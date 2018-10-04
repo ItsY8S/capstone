@@ -71,7 +71,11 @@ Connecting with artists on Instagram will hit a specific market that those websi
 
 ### Sitemap
 
-Create and label a hierarchical diagram that identifies all user facing screens. This will be the road map your instructors and you will use to converse about various screens and to examine user flows between screens.
+**Store Owner Flow**
+![Store Owner Flow](https://image.ibb.co/dm4rTe/Screen_Shot_2018_10_04_at_5_55_34_PM.png)
+
+**Customer Shop Flow**
+![Customer Shop Flow](https://image.ibb.co/kWGMTe/Screen_Shot_2018_10_04_at_7_05_00_PM.png)
 
 ## Interface
 
