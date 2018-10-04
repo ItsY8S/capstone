@@ -75,9 +75,7 @@ No additional information is needed, this is simply a containing section to sepa
 
 ### Feature Definitions
 
-The Agile approach in the context of this course and how our workflow will work would be to create an issue for each feature on your Github repo. Each issue should be titled and defined in detail as well as labeled as a 'Feature'. In this section of the documentation you should link to the issues with a filter applied to only show issues labeled as feature rather than duplicate your efforts by copy/pasting that content into a second place.
-
-> Note: you may need to [create a label](https://help.github.com/articles/creating-a-label/) called 'feature'.
+[Features](https://github.com/ItsY8S/wai/issues?q=is%3Aopen+is%3Aissue+label%3Afeature)
 
 ### Sitemap
 
@@ -124,7 +122,7 @@ Define the server software and hardware, virtualized or not, that your applicati
 
 ### Deployment Workflow
 
-I will be creating new issues for features labeled as 'enhancements'. As I complete the features, I will mark them as completed. At the end of the week, I create a pull request. I'll be using [GitHub Pages](https://pages.github.com/) to host my application. I will use the command `npm run deploy`.
+I will be creating new issues for features labeled as 'features'. As I complete the features, I will mark them as completed. At the end of the week, I create a pull request. I'll be using [GitHub Pages](https://pages.github.com/) to host my application. I will use the command `npm run deploy`.
 
 ### Web Host
 
