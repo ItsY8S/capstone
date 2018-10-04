@@ -9,7 +9,6 @@
   - [Unique Value Proposition](#unique-value-proposition)
   - [Pitch](#pitch)
 - [Spec](#spec)
-
   - [Feature Definitions](#feature-definitions)
   - [Sitemap](#sitemap)
   - [Interface](#interface)
@@ -21,7 +20,6 @@
     - [Integrations](#integrations)
     - [Deployment Workflow](#deployment-workflow)
     - [Web Host](#web-host)
-
 - [Project Milestones](#project-milestones)
   - [Initial Pitch](#initial-pitch)
   - [Initial Project Spec](#initial-project-spec)
@@ -32,8 +30,6 @@
   - [Public Release](#public-release)
 
 ## Brief
-
----
 
 Artist Store targets young artists that want to quickly get a store up and running without much technical knowledge. It makes it easy to add your products, and set tour exclusive merchandise. To be continued...
 
@@ -77,9 +73,7 @@ Connecting with artists on Instagram will hit a specific market that those websi
 
 Create and label a hierarchical diagram that identifies all user facing screens. This will be the road map your instructors and you will use to converse about various screens and to examine user flows between screens.
 
-### Interface
-
-Similar to the Spec section, this is a container section that separates section contents from other sections.
+## Interface
 
 ### Information Architecture
 
@@ -89,9 +83,7 @@ Using your sitemap as a base structure, use this section to house ALL of your te
 
 I would like to support all current browsers and IE11+. Older versions have a less than 1% usage rate. I will use something such as [autoprefixer](https://github.com/postcss/autoprefixer). Portrait mode will be supported on smaller devices such as phones, with landscape potentially coming later. There is a minimum requirement of 320px width.
 
-### Infrastructure
-
-Similar to the Spec section, this is a container section that separates section contents from other sections.
+## Infrastructure
 
 ### Technical Requirements
 
@@ -107,7 +99,7 @@ Define the server software and hardware, virtualized or not, that your applicati
 ### Programming Languages
 
 - [Node.js](https://nodejs.org/)
-- [React.js](https://reactjs.org/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ### Integrations
 
@@ -124,11 +116,7 @@ I will be creating new issues for features labeled as 'features'. As I complete 
 
 [GitHub Pages](https://pages.github.com/)
 
-### Project Milestones
-
----
-
-Similar to the Spec section, this is a container section that separates section contents from other sections. This is a living document, and content here may be filled in as your time in Capstone progresses.
+## Project Milestones
 
 ### Initial Pitch
 
