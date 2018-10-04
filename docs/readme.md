@@ -72,6 +72,12 @@ Connecting with artists on Instagram will hit a specific market that those websi
 ### Sitemap
 
 **Store Owner Flow**
+Not Pictured - Login / Signup Flow
+
+`Landing Page -> Login -> Input Username & Password -> Redirect to Dashboard (Success) -> Redirect to Login (Fail)`
+or
+`Landing Page -> Sign Up -> Input Username & Password & Artist Name -> Redirect to Dashboard (Success) -> Redirect to Sign Up (Fail)`
+
 ![Store Owner Flow](https://image.ibb.co/dm4rTe/Screen_Shot_2018_10_04_at_5_55_34_PM.png)
 
 **Customer Shop Flow**
