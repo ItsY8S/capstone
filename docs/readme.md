@@ -67,11 +67,7 @@ Connecting with artists on Instagram will hit a specific market that those websi
 
 [Pitch](https://youtu.be/Na9JcUb7zbY)
 
-### Spec
-
----
-
-No additional information is needed, this is simply a containing section to separate the spec from the Brief's content.
+## Spec
 
 ### Feature Definitions
 
