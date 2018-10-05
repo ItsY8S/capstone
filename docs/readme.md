@@ -31,9 +31,7 @@
 
 ## Brief
 
-Artist Store targets young artists that want to quickly get a store up and running without much technical knowledge. It makes it easy to add your products, and set tour exclusive merchandise. To be continued...
-
-The Brief is an executive summary of all elements listed within. This should boil down to one long paragraph, devoting one to two sentences to each of the sub-sections defined.
+Artist Store targets young artists that want to quickly get a store up and running without much technical knowledge. It makes it easy to add your products, and set tour exclusive merchandise.
 
 ### Audience
 
@@ -94,7 +92,36 @@ or
 
 ### Information Architecture
 
-Using your sitemap as a base structure, use this section to house ALL of your text content. This is a great place to develop all of the content that will appear on your pages, components, and sub sections outside of the constraints of code. In MVC we separate views from controllers and models, while in the Information Architecture section of your project spec you will separate your content from your code.
+**Dashboard Text Content**
+- Sales
+- Traffic
+- Orders
+
+**Products: Preview/Edit Text Content**
+- Product Title
+- Product Price
+- Product Description
+- Product Sizes
+
+**Concerts**
+- Concert Date
+- Concert City, State, Country
+- Concert Venue
+- Buy Tickets
+
+**Orders**
+- Table (new orders, in process, fulfilled)
+- [See issue](https://github.com/ItsY8S/wai/issues/18) for all content
+
+**Manage**
+- Artist Name
+- Artist Bio
+
+**Contact**
+- Name
+- Email
+- Subject
+- Body
 
 ### Browser Support
 
