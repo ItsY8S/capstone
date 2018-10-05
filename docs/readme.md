@@ -68,6 +68,13 @@ Connecting with artists on Instagram will hit a specific market that those websi
 ### Feature Definitions
 
 [Features](https://github.com/ItsY8S/wai/issues?q=is%3Aopen+is%3Aissue+label%3Afeature)
+- Related Products (Displays products of the same type when viewing a given product)
+- Sign Up, Log In, Log Out (email + password authentication)
+- Image Uploading
+- Google Charts
+- Database Connection + Data
+- Search Products
+
 
 ### Sitemap
 
@@ -97,14 +104,11 @@ I would like to support all current browsers and IE11+. Older versions have a le
 
 ### Technical Requirements
 
-Define the server software and hardware, virtualized or not, that your application requires to run. These should be in a format of Title: Brief description of my usage. If a feature as defined in the issues requires a specific technology, that issue should cite this as well.
+I will be using the MERN stack, minus React.
 
-> Example: Technical Requirement - FFMPEG
-> Server side service to handle video. Needed to extract single frames to turn into thumbnails.
-
-> Example: Issue - Thumbnail Generate:
-> Detailed description of the usage I intend to do... how exactly that will work for the user.
-> Technical Requirement: FFMPEG
+- [MongoDB](https://www.mongodb.com/) with [Mongoose](https://www.npmjs.com/package/mongoose) (for database)
+- [Express](http://expressjs.com/) (Node.js framework / also using [Express Generator](https://expressjs.com/en/starter/generator.html))
+- [Node.js](https://nodejs.org/)
 
 ### Programming Languages
 
