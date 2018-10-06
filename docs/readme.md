@@ -9,7 +9,6 @@
   - [Unique Value Proposition](#unique-value-proposition)
   - [Pitch](#pitch)
 - [Spec](#spec)
-
   - [Feature Definitions](#feature-definitions)
   - [Sitemap](#sitemap)
   - [Interface](#interface)
@@ -21,7 +20,6 @@
     - [Integrations](#integrations)
     - [Deployment Workflow](#deployment-workflow)
     - [Web Host](#web-host)
-
 - [Project Milestones](#project-milestones)
   - [Initial Pitch](#initial-pitch)
   - [Initial Project Spec](#initial-project-spec)
@@ -33,11 +31,7 @@
 
 ## Brief
 
----
-
-Artist Store targets young artists that want to quickly get a store up and running without much technical knowledge. It makes it easy to add your products, and set tour exclusive merchandise. To be continued...
-
-The Brief is an executive summary of all elements listed within. This should boil down to one long paragraph, devoting one to two sentences to each of the sub-sections defined.
+Artist Store targets young artists that want to quickly get a store up and running without much technical knowledge. It makes it easy to add your products, and set tour exclusive merchandise.
 
 ### Audience
 
@@ -67,53 +61,86 @@ Connecting with artists on Instagram will hit a specific market that those websi
 
 [Pitch](https://youtu.be/Na9JcUb7zbY)
 
-### Spec
-
----
-
-No additional information is needed, this is simply a containing section to separate the spec from the Brief's content.
+## Spec
 
 ### Feature Definitions
 
-The Agile approach in the context of this course and how our workflow will work would be to create an issue for each feature on your Github repo. Each issue should be titled and defined in detail as well as labeled as a 'Feature'. In this section of the documentation you should link to the issues with a filter applied to only show issues labeled as feature rather than duplicate your efforts by copy/pasting that content into a second place.
+[Features](https://github.com/ItsY8S/wai/issues?q=is%3Aopen+is%3Aissue+label%3Afeature)
+- Related Products (Displays products of the same type when viewing a given product)
+- Sign Up, Log In, Log Out (email + password authentication)
+- Image Uploading
+- Google Charts
+- Database Connection + Data
+- Search Products
 
-> Note: you may need to [create a label](https://help.github.com/articles/creating-a-label/) called 'feature'.
 
 ### Sitemap
 
-Create and label a hierarchical diagram that identifies all user facing screens. This will be the road map your instructors and you will use to converse about various screens and to examine user flows between screens.
+**Store Owner Flow**
+Not Pictured - Login / Signup Flow
 
-### Interface
+`Landing Page -> Login -> Input Username & Password -> Redirect to Dashboard (Success) -> Redirect to Login (Fail)`
+or
+`Landing Page -> Sign Up -> Input Username & Password & Artist Name -> Redirect to Dashboard (Success) -> Redirect to Sign Up (Fail)`
 
-Similar to the Spec section, this is a container section that separates section contents from other sections.
+![Store Owner Flow](https://image.ibb.co/dm4rTe/Screen_Shot_2018_10_04_at_5_55_34_PM.png)
+
+**Customer Shop Flow**
+![Customer Shop Flow](https://image.ibb.co/kWGMTe/Screen_Shot_2018_10_04_at_7_05_00_PM.png)
+
+## Interface
 
 ### Information Architecture
 
-Using your sitemap as a base structure, use this section to house ALL of your text content. This is a great place to develop all of the content that will appear on your pages, components, and sub sections outside of the constraints of code. In MVC we separate views from controllers and models, while in the Information Architecture section of your project spec you will separate your content from your code.
+**Dashboard Text Content**
+- Sales
+- Traffic
+- Orders
+
+**Products: Preview/Edit Text Content**
+- Product Title
+- Product Price
+- Product Description
+- Product Sizes
+
+**Concerts**
+- Concert Date
+- Concert City, State, Country
+- Concert Venue
+- Buy Tickets
+
+**Orders**
+- Table (new orders, in process, fulfilled)
+- [See issue](https://github.com/ItsY8S/wai/issues/18) for all content
+
+**Manage**
+- Artist Name
+- Artist Bio
+
+**Contact**
+- Name
+- Email
+- Subject
+- Body
 
 ### Browser Support
 
 I would like to support all current browsers and IE11+. Older versions have a less than 1% usage rate. I will use something such as [autoprefixer](https://github.com/postcss/autoprefixer). Portrait mode will be supported on smaller devices such as phones, with landscape potentially coming later. There is a minimum requirement of 320px width.
 
-### Infrastructure
-
-Similar to the Spec section, this is a container section that separates section contents from other sections.
+## Infrastructure
 
 ### Technical Requirements
 
-Define the server software and hardware, virtualized or not, that your application requires to run. These should be in a format of Title: Brief description of my usage. If a feature as defined in the issues requires a specific technology, that issue should cite this as well.
+I will be using the MERN stack, minus React.
 
-> Example: Technical Requirement - FFMPEG
-> Server side service to handle video. Needed to extract single frames to turn into thumbnails.
-
-> Example: Issue - Thumbnail Generate:
-> Detailed description of the usage I intend to do... how exactly that will work for the user.
-> Technical Requirement: FFMPEG
+- [MongoDB](https://www.mongodb.com/) with [Mongoose](https://www.npmjs.com/package/mongoose) (for database)
+- [Express](http://expressjs.com/) (Node.js framework / also using [Express Generator](https://expressjs.com/en/starter/generator.html))
+- [Node.js](https://nodejs.org/)
 
 ### Programming Languages
 
 - [Node.js](https://nodejs.org/)
-- [React.js](https://reactjs.org/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ### Integrations
 
@@ -124,17 +151,13 @@ Define the server software and hardware, virtualized or not, that your applicati
 
 ### Deployment Workflow
 
-I will be creating new issues for features labeled as 'enhancements'. As I complete the features, I will mark them as completed. At the end of the week, I create a pull request. I'll be using [GitHub Pages](https://pages.github.com/) to host my application. I will use the command `npm run deploy`.
+I will be creating new issues for features labeled as 'features'. As I complete the features, I will mark them as completed. At the end of the week, I create a pull request. I'll be using [GitHub Pages](https://pages.github.com/) to host my application. I will use the command `npm run deploy`.
 
 ### Web Host
 
 [GitHub Pages](https://pages.github.com/)
 
-### Project Milestones
-
----
-
-Similar to the Spec section, this is a container section that separates section contents from other sections. This is a living document, and content here may be filled in as your time in Capstone progresses.
+## Project Milestones
 
 ### Initial Pitch
 
