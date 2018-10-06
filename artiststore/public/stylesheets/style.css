@@ -1,0 +1,223 @@
+body {
+  font: 14px 'Muli', sans-serif;
+  background-color: #fff; }
+
+.container {
+  margin-left: 253px; }
+
+nav#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 150px;
+  height: 100vh;
+  padding: 50px; }
+
+#profile-picture {
+  max-width: 100%;
+  height: auto;
+  background: #fff;
+  border: 7.5px solid transparent;
+  border-image: linear-gradient(to top right, #704CE5 0%, #4C66E6 50%, #4CB3E6 100%);
+  border-radius: 100%;
+  border-image-slice: 1;
+  border-image-outset: 3px;
+  margin-bottom: 75px; }
+
+#sidebar ul {
+  list-style: none;
+  font-size: 24px;
+  color: #704CE5;
+  text-align: center; }
+  #sidebar ul li {
+    text-align: center;
+    margin-bottom: 30px; }
+    #sidebar ul li a {
+      color: inherit;
+      text-decoration: none; }
+    #sidebar ul li:hover {
+      color: inherit; }
+
+#sidebar ul#logout {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  width: 100%; }
+
+#selected {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to top, #864DE6 0%, #4CB3E6 100%);
+  border-image-slice: 1;
+  border-image-outset: 10px 0px; }
+
+.divider {
+  display: inline-block;
+  border-right: 3.5px solid transparent;
+  border-image: linear-gradient(to bottom, #704CE5 0%, #CC4CE6 20%, #4C6DE6 65%, #704CE5 100%);
+  border-radius: 100%;
+  border-image-slice: 1;
+  border-image-outset: 3px;
+  height: calc(100vh - 50px);
+  margin: 25px 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.bold {
+  font-weight: bold; }
+
+.title {
+  margin-bottom: 15px; }
+
+.row {
+  padding-left: 50px; }
+
+.fluid {
+  max-width: 100%;
+  height: auto; }
+
+.mt-7-5 {
+  margin-top: 7.5px; }
+
+.mt-25 {
+  margin-top: 25px; }
+
+.mt-35 {
+  margin-top: 35px; }
+
+.mt-50 {
+  margin-top: 50px; }
+
+.mt-75 {
+  margin-top: 75px; }
+
+.pt-25 {
+  padding-top: 25px; }
+
+.pt-50 {
+  padding-top: 50px; }
+
+.pt-100 {
+  padding-top: 100px; }
+
+.pt-125 {
+  padding-top: 125px; }
+
+.opacity-50 {
+  opacity: .5; }
+
+table {
+  font-family: Oswald; }
+  table thead {
+    font-size: 20px;
+    font-weight: bold; }
+  table tbody tr {
+    font-size: 18px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 75px 25px; }
+
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px; }
+  .add .plus {
+    font-size: 100px; }
+
+#search {
+  width: 100%;
+  border-radius: 25px;
+  font-size: 24px;
+  font-weight: 600;
+  border: 2px solid #8c8c8c;
+  padding: 25px 15px;
+  cursor: text; }
+  #search:hover, #search:hover::placeholder, #search:focus::placeholder, #search:focus {
+    border-color: black;
+    opacity: 1; }
+
+.fixed {
+  position: fixed;
+  background: white;
+  width: inherit;
+  z-index: 1; }
+
+.item {
+  position: relative; }
+
+button.badge {
+  border: 1.75px solid black;
+  font-weight: bold;
+  font-size: 16px;
+  height: 32px;
+  line-height: 29px;
+  padding: 0px 4px;
+  color: black;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  background-color: white;
+  letter-spacing: 0px;
+  font-style: italic;
+  text-transform: uppercase; }
+
+.badge.sold-out {
+  border-color: #ff2c2c;
+  color: #ff2c2c; }
+
+button.action {
+  border: 2.5px solid;
+  border-image: linear-gradient(to top right, #704CE5 0%, #4C66E6 50%, #4CB3E6 100%);
+  border-image-slice: 1;
+  border-image-outset: 0px; }
+
+.product-details {
+  font-family: Oswald; }
+
+.title-and-price {
+  display: flex; }
+
+.product-title {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.product-description {
+  color: rgba(39, 39, 39, 0.75);
+  text-transform: uppercase;
+  font-size: 16px; }
+
+.product-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: -100px; }
+
+.btn {
+  font-weight: bold;
+  border: 1.75px solid black;
+  text-transform: uppercase;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border-radius: 0px;
+  padding: 0 38px;
+  line-height: 35px; }
+  .btn:hover {
+    border: 1.75px solid black; }
+
+select.sizes {
+  text-transform: uppercase;
+  border: 1.75px solid #000;
+  border-radius: 0px;
+  text-align-last: center;
+  font-size: 16px;
+  font-weight: bold;
+  width: 111px; }
+
+/*# sourceMappingURL=style.css.map */

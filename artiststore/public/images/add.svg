@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 280 280">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-2);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.055" y1="0.037" x2="0.978" y2="0.969" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a5d7f2"/>
+      <stop offset="0.562" stop-color="#4e64e5"/>
+      <stop offset="0.976" stop-color="#704de5"/>
+      <stop offset="1" stop-color="#724ce5"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.055" y1="0.037" x2="0.978" y2="0.969" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Add_Product" data-name="Add Product" transform="translate(-423 -240)">
+    <rect id="Gradient_Border" data-name="Gradient Border" class="cls-1" width="280" height="280" rx="25" transform="translate(423 240)"/>
+    <rect id="White_Background" data-name="White Background" class="cls-2" width="275" height="275" rx="24" transform="translate(425.5 242.5)"/>
+    <g id="Plus" transform="translate(478 290)">
+      <rect id="Vertical_Line" data-name="Vertical Line" class="cls-3" width="6.4" height="180.427" rx="3.2" transform="translate(81.31)"/>
+      <rect id="Horizontal_Line" data-name="Horizontal Line" class="cls-3" width="6.4" height="171.782" rx="3.2" transform="translate(171.782 86.192) rotate(90)"/>
+    </g>
+  </g>
+</svg>

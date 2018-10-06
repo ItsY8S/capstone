@@ -1,0 +1,64 @@
+extends layout
+
+block content
+  .container
+    .row.pt-25.fixed
+      .twelve.columns
+        h1.bold.title Dashboard
+
+    .row.pt-160
+      .six.columns
+        h3.bold Sales
+        img.fluid(src="/images/Chart 1.png" alt="Sales Bar Chart")
+
+      .six.columns
+        h3.bold Traffic
+        img.fluid(src="/images/Chart 2.png" alt="Traffic Bar Chart")
+
+    .row.mt-50
+      .six.columns
+        h3.bold Recent Orders
+      .six.columns
+        h3.bold Filter
+
+    .row
+      .twelve.columns
+        table.u-full-width
+          thead.bold
+            tr
+              th Order #
+              th Qty
+              th Total
+              th Date
+              th Status
+          tbody
+            tr
+              td #12685
+              td 3
+              td $84.97
+              td 10-03-19
+              td Shipped
+            tr
+              td #12686
+              td 1
+              td $44.99
+              td 10-03-19
+              td Shipped
+            tr
+              td #12687
+              td 2
+              td $29.98
+              td 10-02-19
+              td Shipped
+            tr
+              td #12688
+              td 1
+              td $24.99
+              td 10-02-19
+              td Shipped
+            tr
+              td #12689
+              td 2
+              td $64.98
+              td 10-02-19
+              td Shipped
