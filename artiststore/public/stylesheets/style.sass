@@ -137,6 +137,9 @@ nav#sidebar
 .pt-125
   padding-top: 125px
 
+.pt-150
+  padding-top: 150px
+
 .opacity-50
   opacity: .5
 
@@ -182,7 +185,7 @@ table
   position: fixed
   background: white
   width: inherit
-  z-index: 1
+  z-index: 2
 
 .item
   position: relative
@@ -198,7 +201,7 @@ button.badge
   position: absolute
   bottom: 20px
   right: 20px
-  z-index: 2
+  z-index: 1
   background-color: white
   letter-spacing: 0px
   font-style: italic
@@ -216,25 +219,40 @@ button.action
 
 .product-details
   font-family: Oswald
+  display: flex
+  flex-direction: column
+  width: 100%
 
 .title-and-price
   display: flex
+  width: 100%
+  justify-content: space-between
 
 .product-title
   font-weight: bold
   text-transform: uppercase
+  width: 85%
+  cursor: pointer
+
+.product-price
+  text-align: right
+  font-weight: bold
+  width: 100px
+
+.product-hero
+  cursor: pointer
 
 .product-description
   color: rgba(39, 39, 39, 0.75)
   text-transform: uppercase
   font-size: 16px
+  flex-grow: 1
+  cursor: pointer
 
 .product-buttons
   display: flex
   justify-content: space-between
   width: 100%
-  position: absolute
-  bottom: -100px
 
 .btn
   font-weight: bold
@@ -258,3 +276,34 @@ select.sizes
   font-size: 16px
   font-weight: bold
   width: 111px
+
+.flex
+  display: flex
+  flex: 1
+
+.green
+  border: none
+  font-size: 14px
+  background-color: limegreen
+  margin-bottom: 0
+
+.reset-link
+  color: white
+  text-decoration: none
+
+td
+  border-bottom: none
+
+.edit
+  color: #000
+  font-size: 14px
+  line-height: 34px
+
+.live-input
+  font-size: 3rem
+  border: none !important
+  padding: 0 !important
+  letter-spacing: -0.8px
+  overflow-wrap: normal
+  cursor: auto
+  text-transform: uppercase
