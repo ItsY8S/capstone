@@ -1,20 +1,35 @@
 const createError = require('http-errors')
 const express = require('express')
 const path = require('path')
+const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 const sassMiddleware = require('node-sass-middleware')
-
 const indexRouter = require('./routes/index')
-
+const db = require('./config/mongoose')
+const expressSession = require('express-session')
+const MongoStore = require('connect-mongo')(expressSession)
 const app = express()
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
+// Parse requests into JSON
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+
 app.use(logger('dev'))
 app.use(express.json())
+app.use(
+  expressSession({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: new MongoStore({ mongooseConnection: db })
+  })
+)
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(

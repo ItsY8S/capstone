@@ -97,6 +97,9 @@ nav#sidebar {
 .mt-75 {
   margin-top: 75px; }
 
+.mb-20 {
+  margin-bottom: 20px; }
+
 .pt-25 {
   padding-top: 25px; }
 
@@ -273,5 +276,73 @@ td {
   overflow-wrap: normal;
   cursor: auto;
   text-transform: uppercase; }
+
+form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  min-width: 300px;
+  background-color: transparent;
+  align-self: center;
+  z-index: 2;
+  transition: 0.3s all; }
+  form .input-group {
+    width: 80%;
+    margin: 15px 0;
+    position: relative; }
+    form .input-group label {
+      font-size: 15px;
+      display: block;
+      position: absolute;
+      top: 0px;
+      z-index: -1;
+      transition: 0.3s;
+      color: #555555; }
+    form .input-group input, form .input-group textarea {
+      min-height: unset;
+      height: 30px;
+      width: 90%;
+      padding: 0;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      border-radius: 0;
+      background: transparent;
+      outline: none;
+      z-index: 1;
+      font-size: 20px;
+      transition: 0.3s;
+      color: #272727;
+      resize: none; }
+      form .input-group input:focus, form .input-group input:valid, form .input-group textarea:focus, form .input-group textarea:valid {
+        border: none;
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(to right, #704CE5 0%, #CC4CE6 20%, #4C6DE6 65%, #704CE5 100%);
+        border-image-slice: 1;
+        border-image-outset: 3px; }
+        form .input-group input:focus + label, form .input-group input:valid + label, form .input-group textarea:focus + label, form .input-group textarea:valid + label {
+          transform: translateY(-25px);
+          font-size: 14px;
+          color: black; }
+
+.autoExpand {
+  height: auto !important;
+  overflow: hidden; }
+
+.save {
+  position: fixed;
+  bottom: 50px;
+  right: 75px;
+  background-color: limegreen;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold; }
+  .save:hover {
+    color: white; }
+
+.align-self-center {
+  align-self: center; }
 
 /*# sourceMappingURL=style.css.map */
