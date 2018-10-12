@@ -1,5 +1,19 @@
 var express = require('express')
 var router = express.Router()
+const User = require('../models/User')
+const Product = require('../models/Product')
+const passportLocal = require('../auth/local')
+const protect = require('connect-ensure-login').ensureLoggedIn
+const { check, validationResult } = require('express-validator/check')
+const authController = require('../controllers/authController')
+const productController = require('../controllers/productController')
+
+// Authentication Routes
+router.get('/login', authController.loginRender)
+router.post('/login', authController.login)
+router.get('/signup', authController.signupRender)
+router.post('/signup', authController.checkLength, authController.signup)
+router.get('/logout', authController.logout)
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -13,6 +27,13 @@ router.get('/products', (req, res) => {
 router.get('/products/add', (req, res) => {
   res.render('product-add', { title: 'Add Product' })
 })
+
+// router.post(
+//   'products/add',
+//   productController.upload,
+//   productController.resize,
+//   productController.addProduct
+// )
 
 router.get('/products/:id', (req, res) => {
   res.render('product-edit', { title: 'Edit PRODUCT NAME HERE' })

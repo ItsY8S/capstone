@@ -5,5 +5,10 @@ let productSchema = new Schema({
   title: String,
   price: String,
   description: String,
-  images: [String]
+  images: [String],
+  _owner: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
 })
+
+let Product = mongoose.model('Product', productSchema)
+
+module.exports = Product

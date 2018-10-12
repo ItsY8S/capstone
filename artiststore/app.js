@@ -8,6 +8,7 @@ const logger = require('morgan')
 const sassMiddleware = require('node-sass-middleware')
 const indexRouter = require('./routes/index')
 const db = require('./config/mongoose')
+const passport = require('./config/passport')
 const expressSession = require('express-session')
 const MongoStore = require('connect-mongo')(expressSession)
 const app = express()
@@ -30,6 +31,10 @@ app.use(
     store: new MongoStore({ mongooseConnection: db })
   })
 )
+// Use passport
+app.use(passport.initialize())
+app.use(passport.session())
+
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(
