@@ -8,13 +8,14 @@ block content
       .two.columns.offset-by-one
         h3.bold(style="padding-top: 10px; font-size: 28px") Filter
       .three.columns
-        input#search(type="search" name="" placeholder="Search...")
+        input#search(type="search" name="search" placeholder="Search...")
 
-    .row.pt-150
+    .row.pt-125
       .twelve.columns
         .grid
-          .add
-            img.fluid(src="/images/add.svg" style="width: 100%" alt="Add Product")
+          a(href="/products/add")
+            .add
+              img.fluid(src="/images/add.svg" style="width: 100%" alt="Add Product")
           a(href="/products/bape-black-tee")  
             .item
               img.fluid(src="/images/products/bape-black-tee.png" alt="T-Shirt")

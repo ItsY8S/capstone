@@ -10,6 +10,10 @@ router.get('/products', (req, res) => {
   res.render('products', { title: 'Products' })
 })
 
+router.get('/products/add', (req, res) => {
+  res.render('product-add', { title: 'Add Product' })
+})
+
 router.get('/products/:id', (req, res) => {
   res.render('product-edit', { title: 'Edit PRODUCT NAME HERE' })
 })
