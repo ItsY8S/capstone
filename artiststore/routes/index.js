@@ -25,15 +25,15 @@ router.get('/products', (req, res) => {
 })
 
 router.get('/products/add', (req, res) => {
-  res.render('product-add', { title: 'Add Product' })
+  res.render('product-edit', { title: 'Add Product' })
 })
 
-// router.post(
-//   'products/add',
-//   productController.upload,
-//   productController.resize,
-//   productController.addProduct
-// )
+router.post(
+  '/products/add',
+  productController.upload,
+  productController.resize,
+  productController.addProduct
+)
 
 router.get('/products/:id', (req, res) => {
   res.render('product-edit', { title: 'Edit PRODUCT NAME HERE' })

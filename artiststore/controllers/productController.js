@@ -1,8 +1,10 @@
 const multer = require('multer')
 const jimp = require('jimp')
 const uuid = require('uuid')
+const passportLocal = require('../auth/local')
 const User = require('../models/User')
 const Product = require('../models/Product')
+
 const multerOptions = {
   storage: multer.memoryStorage(),
   fileFilter(req, file, next) {
@@ -22,7 +24,7 @@ exports.getProducts = (req, res) => {
   })
 }
 
-exports.upload = multer(multerOptions).single('productHero')
+exports.upload = multer(multerOptions).single('image')
 
 exports.resize = async (req, res, next) => {
   // check if there is no new file to resize
@@ -31,11 +33,35 @@ exports.resize = async (req, res, next) => {
     return
   }
   const extension = req.file.mimetype.split('/')[1]
-  req.body.productHero = `${uuid.v4()}.${extension}`
+  req.body.image = `${uuid.v4()}.${extension}`
   // now we resize
-  const productHero = await jimp.read(req.file.buffer)
-  await productHero.resize(800, jimp.AUTO)
-  await productHero.write(`./public/uploads/${req.body.productHero}`)
+  const image = await jimp.read(req.file.buffer)
+  await image.resize(800, jimp.AUTO)
+  await image.write(`./public/uploads/${req.body.image}`)
   // once we have written the photo to our filesystem, keep going!
   next()
+}
+
+exports.addProduct = (req, res, next) => {
+  User.findOne(req.user._id, function(err, user) {
+    console.log('BODY HERE', req.body)
+    const product = new Product({
+      title: req.body.title,
+      price: req.body.price,
+      description: req.body.description,
+      image: req.body.image,
+      owner: req.user._id
+    })
+    product.save((err, product) => {
+      if (err) return err
+      passportLocal.authenticate('local', { failureRedirect: '/' })(
+        req,
+        res,
+        () => {
+          res.redirect('/products')
+        }
+      )
+    })
+  })
+  // res.redirect('/products')
 }

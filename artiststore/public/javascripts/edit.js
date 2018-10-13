@@ -9,7 +9,7 @@ productTitle.addEventListener('dblclick', event => {
   const productTitleInput = document.createElement('input')
   productTitleInput.setAttribute('class', 'live-input product-title')
   productTitleInput.setAttribute('type', 'text')
-  productTitleInput.setAttribute('name', 'product-title')
+  productTitleInput.setAttribute('name', 'title')
   productTitleInput.setAttribute('value', value)
   productTitle.parentNode.replaceChild(productTitleInput, productTitle)
 })
@@ -20,7 +20,7 @@ productPrice.addEventListener('dblclick', event => {
   const productPriceInput = document.createElement('input')
   productPriceInput.setAttribute('class', 'live-input product-price bold')
   productPriceInput.setAttribute('type', 'text')
-  productPriceInput.setAttribute('name', 'product-price')
+  productPriceInput.setAttribute('name', 'price')
   productPriceInput.setAttribute('value', value)
   productPrice.parentNode.replaceChild(productPriceInput, productPrice)
 })
@@ -31,7 +31,7 @@ productDescription.addEventListener('dblclick', event => {
   const productDescriptionInput = document.createElement('textarea')
   productDescriptionInput.setAttribute('class', 'live-input')
   // productDescriptionInput.setAttribute('type', 'text')
-  productDescriptionInput.setAttribute('name', 'product')
+  productDescriptionInput.setAttribute('name', 'description')
   productDescriptionInput.value = value
   productDescriptionInput.setAttribute(
     'style',
@@ -50,7 +50,8 @@ productHero.addEventListener('dblclick', event => {
     const productHeroInput = document.createElement('input')
     productHeroInput.setAttribute('class', 'live-input exists product-hero')
     productHeroInput.setAttribute('type', 'file')
-    productHeroInput.setAttribute('name', 'product-title')
+    productHeroInput.setAttribute('accept', 'image/png, image/jpeg')
+    productHeroInput.setAttribute('name', 'image')
     productHeroInput.setAttribute('style', 'display: none')
     productHero.parentNode.appendChild(productHeroInput)
     productHeroInput.click()
