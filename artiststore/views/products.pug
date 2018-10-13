@@ -16,37 +16,44 @@ block content
           a(href="/products/add")
             .add
               img.fluid(src="/images/add.svg" style="width: 100%" alt="Add Product")
-          a(href="/products/bape-black-tee")  
-            .item
-              img.fluid(src="/images/products/bape-black-tee.png" alt="T-Shirt")
-              button.badge Exclusive
-          a(href="/products/black-xo-logo-tee")  
-            .item
-              img.fluid(src="/images/products/black-xo-logo-tee.png" alt="T-Shirt")
-          a(href="/products/longsleeve-camo")  
-            .item
-              img.fluid(src="/images/products/longsleeve-camo.jpg" alt="T-Shirt")
-          a(href="/products/march-14-tee")  
-            .item
-              img.fluid(src="/images/products/march-14-tee.png" alt="T-Shirt")
-          a(href="/products/xo-tat-tee")
-            .item
-              img.fluid(src="/images/products/xo-tat-tee.jpg" alt="T-Shirt")
-          a(href="/products/longsleeve-orange")
-            .item
-              img.fluid(src="/images/products/longsleeve-orange.png" alt="T-Shirt")
-          a(href="/products/orange-tee")
-            .item
-              img.fluid(src="/images/products/orange-tee.png" alt="T-Shirt")
-          a(href="/products/teal-hoodie")
-            .item
-              img.fluid(src="/images/products/teal-hoodie.png" alt="T-Shirt")
-          a(href="/products/orange-hoodie")
-            .item
-              img.fluid(src="/images/products/orange-hoodie.png" alt="T-Shirt")
-          a(href="/products/bape-black-hoodie")
-            .item
-              img.fluid(src="/images/products/bape-black-hoodie.png" alt="T-Shirt")
-          a(href="/products/bape-orange-camo")
-            .item
-              img.fluid(src="/images/products/bape-orange-camo.png" alt="T-Shirt")
+          each product in products
+            a(href=`/products/${product.title}`)
+              .item
+                img.fluid(src=`/uploads/${product.image}` alt=product.title)
+            
+
+
+          //- a(href="/products/bape-black-tee")  
+          //-   .item
+          //-     img.fluid(src="/images/products/bape-black-tee.png" alt="T-Shirt")
+          //-     button.badge Exclusive
+          //- a(href="/products/black-xo-logo-tee")  
+          //-   .item
+          //-     img.fluid(src="/images/products/black-xo-logo-tee.png" alt="T-Shirt")
+          //- a(href="/products/longsleeve-camo")  
+          //-   .item
+          //-     img.fluid(src="/images/products/longsleeve-camo.jpg" alt="T-Shirt")
+          //- a(href="/products/march-14-tee")  
+          //-   .item
+          //-     img.fluid(src="/images/products/march-14-tee.png" alt="T-Shirt")
+          //- a(href="/products/xo-tat-tee")
+          //-   .item
+          //-     img.fluid(src="/images/products/xo-tat-tee.jpg" alt="T-Shirt")
+          //- a(href="/products/longsleeve-orange")
+          //-   .item
+          //-     img.fluid(src="/images/products/longsleeve-orange.png" alt="T-Shirt")
+          //- a(href="/products/orange-tee")
+          //-   .item
+          //-     img.fluid(src="/images/products/orange-tee.png" alt="T-Shirt")
+          //- a(href="/products/teal-hoodie")
+          //-   .item
+          //-     img.fluid(src="/images/products/teal-hoodie.png" alt="T-Shirt")
+          //- a(href="/products/orange-hoodie")
+          //-   .item
+          //-     img.fluid(src="/images/products/orange-hoodie.png" alt="T-Shirt")
+          //- a(href="/products/bape-black-hoodie")
+          //-   .item
+          //-     img.fluid(src="/images/products/bape-black-hoodie.png" alt="T-Shirt")
+          //- a(href="/products/bape-orange-camo")
+          //-   .item
+          //-     img.fluid(src="/images/products/bape-orange-camo.png" alt="T-Shirt")

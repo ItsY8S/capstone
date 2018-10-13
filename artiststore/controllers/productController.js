@@ -17,9 +17,10 @@ const multerOptions = {
   }
 }
 
-exports.getProducts = (req, res) => {
+exports.getProducts = (req, res, next) => {
   Product.find({ _owner: req.user._id }, function(err, products) {
     if (err) return err
+    console.log(products)
     res.render('products', { products })
   })
 }
@@ -50,7 +51,7 @@ exports.addProduct = (req, res, next) => {
       price: req.body.price,
       description: req.body.description,
       image: req.body.image,
-      owner: req.user._id
+      _owner: req.user._id
     })
     product.save((err, product) => {
       if (err) return err
@@ -63,5 +64,4 @@ exports.addProduct = (req, res, next) => {
       )
     })
   })
-  // res.redirect('/products')
 }

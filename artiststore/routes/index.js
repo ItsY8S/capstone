@@ -20,9 +20,7 @@ router.get('/', function(req, res, next) {
   res.render('dashboard', { title: 'Dashboard' })
 })
 
-router.get('/products', (req, res) => {
-  res.render('products', { title: 'Products' })
-})
+router.get('/products', productController.getProducts)
 
 router.get('/products/add', (req, res) => {
   res.render('product-edit', { title: 'Add Product' })
