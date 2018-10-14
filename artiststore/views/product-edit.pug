@@ -10,14 +10,23 @@ block content
       .row.pt-150.flex
         .six.columns
           .product-hero
-            img.fluid(src="/images/products/teal-hoodie.png" alt="PRODUCT NAME HERE")
+            if product
+              img.fluid(src=`/uploads/${product.image}` alt="PRODUCT NAME HERE")
+            else
+              img.fluid(src="/images/camera-icon.svg" alt="Add Product Image")
         .five.columns.offset-by-one.flex(style="position: relative")
           .product-details
             .title-and-price
-              h4.product-title Kiss Land Skyline Fleece Pullover Hoodie
-              h4.product-price.bold $78
+              if product
+                h4.product-title=product.title
+                h4.product-price.bold=`${product.price}`
+              else
+                input.product-title.live-input(type="text" name="title" placeholder='Product Title')
             .product-description.mt-25
-              p DESIGNED BY XO. KISS LAND VINTAGE GREEN HEAVYWEIGHT COTTON FLEECE PULLOVER HOODIE FEATURING SKYLINE WRITING AND JAPANESE 5 LOGO ON BACK. MACHINE WASH COLD, DELICATE CYCLE, TUMBLE DRY LOW. DO NOT IRON EMBELLISHMENT. 100% COTTON FLEECE. GARMENT MADE IN CHINA, EMBELLISHED IN USA.
+              if product
+                product.description
+              else
+                textarea.autoExpand.live-input(name="description" placeholder="Product Description")
             .product-buttons
               select.sizes
                 option Small
@@ -55,4 +64,5 @@ block content
                 img.fluid(src="/images/products/beige-hoodie.jpg" alt="Related Product: Beige Hoodie")
 
 
+  script(src="/javascripts/textarea.js")
   script(src="/javascripts/edit.js")

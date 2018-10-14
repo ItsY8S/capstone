@@ -17,7 +17,7 @@ block content
             .add
               img.fluid(src="/images/add.svg" style="width: 100%" alt="Add Product")
           each product in products
-            a(href=`/products/${product.title}`)
+            a(href=`/products/${product._id}`)
               .item
                 img.fluid(src=`/uploads/${product.image}` alt=product.title)
             
