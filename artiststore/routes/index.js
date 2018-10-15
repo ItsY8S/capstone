@@ -36,6 +36,7 @@ router.post(
   productController.resize,
   productController.editProductById
 )
+router.get('/products/delete/:id', productController.deleteProductById)
 router.post('/concerts/add', concertController.addConcert)
 router.get('/concerts/:id', concertController.getConcertById)
 

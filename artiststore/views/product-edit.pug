@@ -37,7 +37,8 @@ block content
                 option Small
                 option Medium
                 option Large
-              button.btn.action(type="submit") Edit
+              a(href=`/products/delete/${product._id}`) Delete
+              button.btn.action(type="submit") Save
 
       //- .row.mt-7-5
       //-   .six.columns
@@ -69,5 +70,5 @@ block content
                 img.fluid(src="/images/products/beige-hoodie.jpg" alt="Related Product: Beige Hoodie")
 
 
-  script(src="/javascripts/textarea.js")
+  //- script(src="/javascripts/textarea.js")
   script(src="/javascripts/edit.js")
