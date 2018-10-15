@@ -30,6 +30,16 @@ router.get('/manage', manageController.getManage)
 router.get('/products/add', productController.getProductAdd)
 router.get('/products/:id', productController.getProductById)
 router.post(
+  '/products/edit/:id',
+  protect(),
+  productController.upload,
+  productController.resize,
+  productController.editProductById
+)
+router.post('/concerts/add', concertController.addConcert)
+router.get('/concerts/:id', concertController.getConcertById)
+
+router.post(
   '/products/add',
   productController.upload,
   productController.resize,

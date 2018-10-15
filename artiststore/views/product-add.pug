@@ -4,40 +4,26 @@ block content
   .container
     .row.pt-25.fixed
       .twelve.columns
-        h1.bold.title=`Editing: ${product.title}`
+        h1.bold.title Add a Product
 
-    form(action=`/products/edit/${product._id}` method="POST" enctype="multipart/form-data")
+    form(action="/products/add" method="POST" enctype="multipart/form-data")
       .row.pt-150.flex
         .six.columns
-          .product-hero
-            if product
-              img.fluid(src=`/uploads/${product.image}` alt=product.title)
-            else
+          .product-hero(style="padding: 100px")
               img.fluid(src="/images/camera-icon.svg" alt="Add Product Image")
         .five.columns.offset-by-one.flex(style="position: relative")
           .product-details
             .title-and-price
-              if product.title
-                h4.product-title=product.title
-              else
                 input.product-title.live-input(type="text" name="title" placeholder='Product Title')
-
-              if product.price
-                h4.product-price.bold=`${product.price}`
-              else
                 input.product-price.live-input(type="text" name="price" placeholder="$")
-              
             .product-description.mt-25
-              if product.description
-                p(name="description")=product.description
-              else
                 textarea.autoExpand.live-input(name="description" placeholder="Product Description")
             .product-buttons
               select.sizes
                 option Small
                 option Medium
                 option Large
-              button.btn.action(type="submit") Edit
+              button.btn.action(type="submit") Add
 
       //- .row.mt-7-5
       //-   .six.columns

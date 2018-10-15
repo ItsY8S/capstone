@@ -37,16 +37,20 @@ exports.resize = async (req, res, next) => {
 }
 
 exports.getProducts = (req, res, next) => {
-  Product.find({ _owner: req.user._id }, (err, products) => {
-    console.log(req.user)
-    // if (err) return err
-    console.log(products)
-    res.render('products', { products, title: 'Products' })
+  console.log(req.body)
+  User.findById(req.user._id, function(err, user) {
+    console.log(user)
+    Product.find({ _owner: req.user._id }, (err, products) => {
+      console.log(req.user)
+      // if (err) return err
+      console.log(products)
+      res.render('products', { user, products, title: 'Products' })
+    })
   })
 }
 
 exports.getProductAdd = (req, res, next) => {
-  res.render('product-edit', { title: 'Add a Product' })
+  res.render('product-add', { title: 'Add a Product' })
 }
 
 exports.getProductById = (req, res, next) => {
@@ -69,13 +73,26 @@ exports.addProduct = (req, res, next) => {
     })
     product.save((err, product) => {
       if (err) return err
-      passportLocal.authenticate('local', { failureRedirect: '/' })(
-        req,
-        res,
-        () => {
-          res.redirect('/products')
-        }
-      )
+      res.redirect('/products')
     })
   })
+}
+
+exports.editProductById = (req, res, next) => {
+  Product.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    // {
+    //   title: req.body.title,
+    //   price: req.body.price,
+    //   description: req.body.description,
+    //   image: req.body.image,
+    //   _owner: req.user._id
+    // },
+    { new: true, upsert: true },
+    function(err, product) {
+      if (err) throw err
+      res.redirect('/')
+    }
+  )
 }

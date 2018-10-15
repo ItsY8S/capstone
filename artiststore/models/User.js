@@ -4,7 +4,8 @@ const Schema = mongoose.Schema
 let userSchema = new Schema({
   username: { type: String, required: true, unique: true },
   password: String,
-  products: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }]
+  products: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }],
+  storeName: String
 })
 
 userSchema.statics.findOneOrCreate = function findOneOrCreate(
