@@ -46,4 +46,6 @@ router.post(
   productController.addProduct
 )
 
+router.post('/manage/update', manageController.updateStore)
+
 module.exports = router

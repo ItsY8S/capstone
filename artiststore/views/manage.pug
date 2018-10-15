@@ -9,14 +9,14 @@ block content
     .row.pt-125
       .six.columns
         h5.bold Store Information
-        form(autocomplete="off")
+        form(autocomplete="off" action="/manage/update" method="POST")
         
           .input-group
-            input(type="text" name="store-name" required)
+            input(type="text" name="storeName" value=`${user.storeName}` required)
             label(for="store-name") Store Name
             
           .input-group
-            textarea.autoExpand(type="text" name="store-bio" data-min-rows="1" rows="1" required)
+            textarea.autoExpand(type="text" name="storeBio" data-min-rows="1" rows="10" required)=user.storeBio
             label(for="store-bio") Store Bio
 
           button.save(type="submit") Save
