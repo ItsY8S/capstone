@@ -10,12 +10,12 @@ block content
       .row.pt-150.flex
         .six.columns
           .product-hero(style="padding: 100px")
-              img.fluid(src="/images/camera-icon.svg" alt="Add Product Image")
+            img.fluid(src="/images/camera-icon.svg" alt="Add Product Image")
         .five.columns.offset-by-one.flex(style="position: relative")
           .product-details
             .title-and-price
                 input.product-title.live-input(type="text" name="title" placeholder='Product Title')
-                input.product-price.live-input(type="text" name="price" placeholder="$")
+                input.product-price.live-input(type="text" name="price" placeholder="$" value="$")
             .product-description.mt-25
                 textarea.autoExpand.live-input(name="description" placeholder="Product Description")
             .product-buttons

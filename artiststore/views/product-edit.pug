@@ -10,7 +10,7 @@ block content
       .row.pt-150.flex
         .six.columns
           .product-hero
-            if product
+            if product.image
               img.fluid(src=`/uploads/${product.image}` alt=product.title)
             else
               img.fluid(src="/images/camera-icon.svg" alt="Add Product Image")
@@ -71,4 +71,4 @@ block content
 
 
   //- script(src="/javascripts/textarea.js")
-  script(src="/javascripts/edit.js")
+  script(defer src="/javascripts/edit.js")

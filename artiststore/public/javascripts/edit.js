@@ -25,23 +25,25 @@ productPrice.addEventListener('dblclick', event => {
   productPrice.parentNode.replaceChild(productPriceInput, productPrice)
 })
 
-productDescription.addEventListener('dblclick', event => {
-  const value = productDescription.innerText
-  console.log('value', value)
-  const productDescriptionInput = document.createElement('textarea')
-  productDescriptionInput.setAttribute('class', 'live-input')
-  // productDescriptionInput.setAttribute('type', 'text')
-  productDescriptionInput.setAttribute('name', 'description')
-  productDescriptionInput.value = value
-  productDescriptionInput.setAttribute(
-    'style',
-    'width: 100%; height: 250px; resize: none; font-size: 16px; letter-spacing: 0px'
-  )
-  productDescription.parentNode.replaceChild(
-    productDescriptionInput,
-    productDescription
-  )
-})
+if (productDescription) {
+  productDescription.addEventListener('dblclick', event => {
+    const value = productDescription.innerText
+    console.log('value', value)
+    const productDescriptionInput = document.createElement('textarea')
+    productDescriptionInput.setAttribute('class', 'live-input')
+    // productDescriptionInput.setAttribute('type', 'text')
+    productDescriptionInput.setAttribute('name', 'description')
+    productDescriptionInput.value = value
+    productDescriptionInput.setAttribute(
+      'style',
+      'width: 100%; height: 250px; resize: none; font-size: 16px; letter-spacing: 0px'
+    )
+    productDescription.parentNode.replaceChild(
+      productDescriptionInput,
+      productDescription
+    )
+  })
+}
 
 productHero.addEventListener('dblclick', event => {
   const itExists = document.querySelector('.exists')

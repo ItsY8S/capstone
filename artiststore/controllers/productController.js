@@ -92,7 +92,8 @@ exports.editProductById = (req, res, next) => {
     { new: true, upsert: true },
     function(err, product) {
       if (err) throw err
-      res.redirect('/')
+
+      res.redirect(`/products/${product.id}`)
     }
   )
 }
