@@ -160,6 +160,9 @@ table {
   width: inherit;
   z-index: 2; }
 
+.inherit {
+  position: inherit !important; }
+
 .item {
   position: relative; }
 
@@ -299,7 +302,7 @@ form {
   transition: 0.3s all; }
   form .input-group {
     width: 80%;
-    margin: 15px 0;
+    margin: 25px 0;
     position: relative; }
     form .input-group label {
       font-size: 15px;
@@ -344,12 +347,21 @@ form {
   bottom: 50px;
   right: 75px;
   background-color: limegreen;
-  color: white;
+  color: white !important;
   border: none;
   font-size: 16px;
   font-weight: bold; }
   .save:hover {
     color: white; }
+
+.delete {
+  background-color: #ee2e24;
+  font-size: 16px;
+  font-weight: bold;
+  border: none; }
+  .delete a {
+    color: white;
+    text-decoration: none; }
 
 .align-self-center {
   align-self: center; }

@@ -10,7 +10,7 @@ block content
       .row.pt-150.flex
         .six.columns
           .product-hero(style="padding: 100px")
-            img.fluid(src="/images/camera-icon.svg" alt="Add Product Image")
+            img#hero.fluid(src="/images/camera-icon.svg" alt="Add Product Image")
         .five.columns.offset-by-one.flex(style="position: relative")
           .product-details
             .title-and-price
@@ -23,7 +23,7 @@ block content
                 option Small
                 option Medium
                 option Large
-              button.btn.action(type="submit") Add
+              button.inherit.save(type="submit") Add
 
       //- .row.mt-7-5
       //-   .six.columns
@@ -37,7 +37,7 @@ block content
         .twelve.columns
           h2.bold Related
       
-      .row.mt-35
+      .row.mt-35.mb-50
         .twelve.columns
           .grid
             a(href="/products/teal-hoodie")

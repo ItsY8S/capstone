@@ -193,6 +193,9 @@ table
   width: inherit
   z-index: 2
 
+.inherit
+  position: inherit !important
+
 .item
   position: relative
 
@@ -335,7 +338,7 @@ form
 	
   .input-group
     width: 80%
-    margin: 15px 0
+    margin: 25px 0
     position: relative
 		
     label
@@ -384,13 +387,23 @@ form
   bottom: 50px
   right: 75px
   background-color: limegreen
-  color: white
+  color: white !important
   border: none
   font-size: 16px
   font-weight: bold
 
   &:hover
     color: white
+
+.delete
+  background-color: #ee2e24
+  font-size: 16px
+  font-weight: bold
+  border: none
+
+  a
+    color: white
+    text-decoration: none
 
 .align-self-center
   align-self: center
@@ -464,4 +477,3 @@ input
   left: 50px
   color: #fff
   text-shadow: 3px 3px 3px #fe5492
-

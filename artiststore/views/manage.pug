@@ -7,10 +7,13 @@ block content
         h1.bold.title Manage
     
     .row.pt-125
-      .six.columns
+      .twelve.columns
         h5.bold Store Information
+
+    .row.pt-25
+      .four.columns
+
         form(autocomplete="off" action="/manage/update" method="POST")
-        
           .input-group
             input(type="text" name="storeName" value=`${user.storeName}` required)
             label(for="store-name") Store Name

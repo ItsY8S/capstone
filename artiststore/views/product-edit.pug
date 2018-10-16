@@ -11,9 +11,9 @@ block content
         .six.columns
           .product-hero
             if product.image
-              img.fluid(src=`/uploads/${product.image}` alt=product.title)
+              img#hero.fluid(src=`/uploads/${product.image}` alt=product.title)
             else
-              img.fluid(src="/images/camera-icon.svg" alt="Add Product Image")
+              img#hero.fluid(src="/images/camera-icon.svg" alt="Add Product Image")
         .five.columns.offset-by-one.flex(style="position: relative")
           .product-details
             .title-and-price
@@ -33,12 +33,9 @@ block content
               else
                 textarea.autoExpand.live-input(name="description" placeholder="Product Description")
             .product-buttons
-              select.sizes
-                option Small
-                option Medium
-                option Large
-              a(href=`/products/delete/${product._id}`) Delete
-              button.btn.action(type="submit") Save
+              button.delete
+                a(href=`/products/delete/${product._id}`) Delete
+              button.inherit.save(type="submit") Save
 
       //- .row.mt-7-5
       //-   .six.columns
@@ -52,7 +49,7 @@ block content
         .twelve.columns
           h2.bold Related
       
-      .row.mt-35
+      .row.mt-35.mb-50
         .twelve.columns
           .grid
             a(href="/products/teal-hoodie")
@@ -71,4 +68,4 @@ block content
 
 
   //- script(src="/javascripts/textarea.js")
-  script(defer src="/javascripts/edit.js")
+  script(src="/javascripts/edit.js")

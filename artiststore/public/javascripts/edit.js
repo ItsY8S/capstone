@@ -55,6 +55,10 @@ productHero.addEventListener('dblclick', event => {
     productHeroInput.setAttribute('accept', 'image/png, image/jpeg')
     productHeroInput.setAttribute('name', 'image')
     productHeroInput.setAttribute('style', 'display: none')
+    productHeroInput.setAttribute(
+      'onchange',
+      "document.getElementById('hero').src = window.URL.createObjectURL(this.files[0])"
+    )
     productHero.parentNode.appendChild(productHeroInput)
     productHeroInput.click()
   } else {
