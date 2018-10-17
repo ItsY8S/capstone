@@ -37,7 +37,7 @@ exports.resize = async (req, res, next) => {
 }
 
 exports.getProducts = (req, res, next) => {
-  console.log(req.body)
+  console.log('URL HERE', req.route.path)
   User.findById(req.user._id, function(err, user) {
     console.log(user)
     Product.find({ _owner: req.user._id }, (err, products) => {
