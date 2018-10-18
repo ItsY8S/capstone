@@ -20,15 +20,15 @@ router.post('/signup', authController.checkLength, authController.signup)
 router.get('/logout', authController.logout)
 
 // GET Navigation Routes
-router.get('/', dashController.getDashboard)
-router.get('/products', productController.getProducts)
-router.get('/orders', orderController.getOrders)
-router.get('/concerts', concertController.getConcerts)
-router.get('/manage', manageController.getManage)
+router.get('/', protect(), dashController.getDashboard)
+router.get('/products', protect(), productController.getProducts)
+router.get('/orders', protect(), orderController.getOrders)
+router.get('/concerts', protect(), concertController.getConcerts)
+router.get('/manage', protect(), manageController.getManage)
 
 // CRUD Routes
-router.get('/products/add', productController.getProductAdd)
-router.get('/products/:id', productController.getProductById)
+router.get('/products/add', protect(), productController.getProductAdd)
+router.get('/products/:id', protect(), productController.getProductById)
 router.post(
   '/products/edit/:id',
   protect(),
@@ -36,17 +36,22 @@ router.post(
   productController.resize,
   productController.editProductById
 )
-router.get('/products/delete/:id', productController.deleteProductById)
-router.post('/concerts/add', concertController.addConcert)
-router.get('/concerts/:id', concertController.getConcertById)
+router.get(
+  '/products/delete/:id',
+  protect(),
+  productController.deleteProductById
+)
+router.post('/concerts/add', protect(), concertController.addConcert)
+router.get('/concerts/:id', protect(), concertController.getConcertById)
 
 router.post(
   '/products/add',
+  protect(),
   productController.upload,
   productController.resize,
   productController.addProduct
 )
 
-router.post('/manage/update', manageController.updateStore)
+router.post('/manage/update', protect(), manageController.updateStore)
 
 module.exports = router

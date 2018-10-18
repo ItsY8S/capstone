@@ -93,13 +93,12 @@ exports.editProductById = (req, res, next) => {
     function(err, product) {
       if (err) throw err
 
-      res.redirect(`/products/${product.id}`)
+      res.redirect(`/products`)
     }
   )
 }
 
 exports.deleteProductById = (req, res, next) => {
-  console.log('hit this')
   Product.findByIdAndRemove(req.params.id, function(err) {
     if (err) throw err
     console.log('Product Deleted')

@@ -17,21 +17,12 @@ block content
         .five.columns.offset-by-one.flex(style="position: relative")
           .product-details
             .title-and-price
-              if product.title
-                h4.product-title=product.title
-              else
-                input.product-title.live-input(type="text" name="title" placeholder='Product Title')
+              input.product-title.live-input(type="text" name="title" placeholder="Product Title" value=product.title)
 
-              if product.price
-                h4.product-price.bold=`${product.price}`
-              else
-                input.product-price.live-input(type="text" name="price" placeholder="$")
-              
+              input.product-price.live-input(type="text" name="price" placeholder="$" value=product.price)
+
             .product-description.mt-25
-              if product.description
-                p(name="description")=product.description
-              else
-                textarea.autoExpand.live-input(name="description" placeholder="Product Description")
+              textarea.autoExpand.live-input(name="description" placeholder="Product Description")=product.description
             .product-buttons
               button.delete
                 a(href=`/products/delete/${product._id}`) Delete
@@ -45,26 +36,26 @@ block content
       //-       img.fluid.opacity-50(src="/images/products/teal-hoodie.png" alt="PRODUCT NAME HERE")
 
 
-      .row.mt-75
-        .twelve.columns
-          h2.bold Related
+      //- .row.mt-75
+      //-   .twelve.columns
+      //-     h2.bold Related
       
-      .row.mt-35.mb-50
-        .twelve.columns
-          .grid
-            a(href="/products/teal-hoodie")
-              .item
-                img.fluid(src="/images/products/red-hoodie.jpg" alt="Related Product: Red Hoodie")
-            a(href="/products/longsleeve-overdose")
-              .item
-                img.fluid(src="/images/products/longsleeve-overdose.jpg" alt="Related Product: Longsleeve Overdose")
-                button.sold-out.badge Sold Out!
-            a(href="/products/orange-hoodie")
-              .item
-                img.fluid(src="/images/products/orange-hoodie.png" alt="Related Product: Orange Hoodie")
-            a(href="/products/beige-hoodie")
-              .item
-                img.fluid(src="/images/products/beige-hoodie.jpg" alt="Related Product: Beige Hoodie")
+      //- .row.mt-35.mb-50
+      //-   .twelve.columns
+      //-     .grid
+      //-       a(href="/products/teal-hoodie")
+      //-         .item
+      //-           img.fluid(src="/images/products/red-hoodie.jpg" alt="Related Product: Red Hoodie")
+      //-       a(href="/products/longsleeve-overdose")
+      //-         .item
+      //-           img.fluid(src="/images/products/longsleeve-overdose.jpg" alt="Related Product: Longsleeve Overdose")
+      //-           button.sold-out.badge Sold Out!
+      //-       a(href="/products/orange-hoodie")
+      //-         .item
+      //-           img.fluid(src="/images/products/orange-hoodie.png" alt="Related Product: Orange Hoodie")
+      //-       a(href="/products/beige-hoodie")
+      //-         .item
+      //-           img.fluid(src="/images/products/beige-hoodie.jpg" alt="Related Product: Beige Hoodie")
 
 
   //- script(src="/javascripts/textarea.js")

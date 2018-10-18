@@ -208,12 +208,17 @@ button.action {
   font-weight: bold;
   text-transform: uppercase;
   width: 85%;
-  cursor: pointer; }
+  cursor: pointer;
+  margin: 0; }
 
 .product-price {
   text-align: right;
   font-weight: bold;
-  width: 100px; }
+  width: 100px;
+  margin: 0; }
+
+.price {
+  font-size: 30px; }
 
 .product-hero {
   cursor: pointer; }
