@@ -200,6 +200,7 @@ table
 
 .item
   position: relative
+  align-self: center
 
 button.badge
   border: 1.75px solid black
@@ -263,6 +264,7 @@ button.action
 
 .product-hero
   cursor: pointer
+  align-self: center
 
 .product-description
   color: rgba(39, 39, 39, 0.75)
@@ -338,7 +340,7 @@ form
   flex-direction: column
   margin: 0 auto
   justify-content: center
-  min-width: 300px
+  // min-width: 300px
   background-color: transparent
   align-self: center
   z-index: 2
@@ -537,3 +539,86 @@ input
 
 aside
   grid-area: aside
+
+
+$breakpoint-phone: 600px
+$breakpoint-tablet: 900px
+$breakpoint-desktop: 1200px
+
+@media (min-width: 0px) and (max-width: $breakpoint-phone)
+  .grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 25px
+
+  nav#sidebar
+    display: none
+
+  nav h1
+    font-size: 24px
+    align-self: center
+
+  #search
+    width: 150px
+    font-size: 20px
+    padding: 10px 15px
+    
+  .container2
+    margin-left: 0
+    grid-template-columns: 1fr
+
+  .content
+    margin: 0px 25px 25px
+
+  .product-details
+    grid-template-columns: 1fr
+    grid-gap: 50px
+
+  .title-and-price
+    margin-bottom: 25px
+
+  .product-description textarea
+    max-width: 100%
+    width: 100%
+    // min-height: 300px !important
+    word-break: break-all
+  
+  .header
+    margin-bottom: 25px
+
+  .charts
+    grid-template-columns: 1fr
+
+  table
+    thead
+      tr
+        font-size: 14px
+
+    tbody
+      tr
+        font-size: 12px
+
+@media (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet)
+  .grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-gap: 25px
+
+  nav#sidebar
+    display: none
+
+  nav h1
+    font-size: 28px
+    align-self: center
+
+  #search
+    font-size: 16px
+    padding: 10px 15px
+
+  .container2
+    margin-left: 0
+    grid-template-columns: 1fr
+
+  
+
+@media (min-width:$breakpoint-tablet) and (max-width: $breakpoint-desktop)
+  .grid
+    grid-template-columns: 1fr 1fr 1fr

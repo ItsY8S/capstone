@@ -4,57 +4,58 @@ block content
   .container2
     include sidebar.pug
     .content
-      .header.pt-25.fixed
+      nav.header
         h1.bold.title Dashboard
 
-      .charts.pt-150
-        .sales
-          h3.bold Sales
-          img.fluid(src="/images/Chart 1.png" alt="Sales Bar Chart")
+      main
+        .charts
+          .sales
+            h3.bold Sales
+            img.fluid(src="/images/Chart 1.png" alt="Sales Bar Chart")
 
-        .traffic
-          h3.bold Traffic
-          img.fluid(src="/images/Chart 2.png" alt="Traffic Bar Chart")
+          .traffic
+            h3.bold Traffic
+            img.fluid(src="/images/Chart 2.png" alt="Traffic Bar Chart")
 
-      .mt-50.flex
-        h3.bold.mb-0 Recent Orders
-          
-      table.u-full-width
-        thead.bold
-          tr
-            th Order #
-            th Qty
-            th Total
-            th Date
-            th Status
-        tbody
-          tr
-            td #12685
-            td 3
-            td $84.97
-            td 10-03-19
-            td Shipped
-          tr
-            td #12686
-            td 1
-            td $44.99
-            td 10-03-19
-            td Shipped
-          tr
-            td #12687
-            td 2
-            td $29.98
-            td 10-02-19
-            td Shipped
-          tr
-            td #12688
-            td 1
-            td $24.99
-            td 10-02-19
-            td Shipped
-          tr
-            td #12689
-            td 2
-            td $64.98
-            td 10-02-19
-            td Shipped
+        .mt-50.flex
+          h3.bold.mb-0 Recent Orders
+            
+        table.u-full-width
+          thead.bold
+            tr
+              th Order #
+              th Qty
+              th Total
+              th Date
+              th Status
+          tbody
+            tr
+              td #12685
+              td 3
+              td $84.97
+              td 10-03-19
+              td Shipped
+            tr
+              td #12686
+              td 1
+              td $44.99
+              td 10-03-19
+              td Shipped
+            tr
+              td #12687
+              td 2
+              td $29.98
+              td 10-02-19
+              td Shipped
+            tr
+              td #12688
+              td 1
+              td $24.99
+              td 10-02-19
+              td Shipped
+            tr
+              td #12689
+              td 2
+              td $64.98
+              td 10-02-19
+              td Shipped

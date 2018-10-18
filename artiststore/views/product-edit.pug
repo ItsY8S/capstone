@@ -5,7 +5,7 @@ block content
     include sidebar.pug
     .content
       nav.header
-        h1.bold.title=`Editing: ${product.title}`
+        h1.bold.title Products: Edit
 
       form(action=`/products/edit/${product._id}` method="POST" enctype="multipart/form-data")
         .product-details
@@ -22,7 +22,7 @@ block content
               input.product-price.live-input(type="text" name="price" placeholder="$" value=product.price)
 
             .product-description
-              textarea.autoExpand.live-input(name="description" placeholder="Product Description")=product.description
+              textarea.autoExpand.live-input(name="description" placeholder="Product Description" rows="5")=product.description
             .product-buttons
               button.delete
                 a(href=`/products/delete/${product._id}`) Delete

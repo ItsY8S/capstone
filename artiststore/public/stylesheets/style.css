@@ -166,7 +166,8 @@ table {
   position: inherit !important; }
 
 .item {
-  position: relative; }
+  position: relative;
+  align-self: center; }
 
 button.badge {
   border: 1.75px solid black;
@@ -229,7 +230,8 @@ button.action {
   font-size: 30px; }
 
 .product-hero {
-  cursor: pointer; }
+  cursor: pointer;
+  align-self: center; }
 
 .product-description {
   color: rgba(39, 39, 39, 0.75);
@@ -303,7 +305,6 @@ form {
   flex-direction: column;
   margin: 0 auto;
   justify-content: center;
-  min-width: 300px;
   background-color: transparent;
   align-self: center;
   z-index: 2;
@@ -487,5 +488,61 @@ input:-webkit-autofill {
 
 aside {
   grid-area: aside; }
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px; }
+  nav#sidebar {
+    display: none; }
+  nav h1 {
+    font-size: 24px;
+    align-self: center; }
+  #search {
+    width: 150px;
+    font-size: 20px;
+    padding: 10px 15px; }
+  .container2 {
+    margin-left: 0;
+    grid-template-columns: 1fr; }
+  .content {
+    margin: 0px 25px 25px; }
+  .product-details {
+    grid-template-columns: 1fr;
+    grid-gap: 50px; }
+  .title-and-price {
+    margin-bottom: 25px; }
+  .product-description textarea {
+    max-width: 100%;
+    width: 100%;
+    word-break: break-all; }
+  .header {
+    margin-bottom: 25px; }
+  .charts {
+    grid-template-columns: 1fr; }
+  table thead tr {
+    font-size: 14px; }
+  table tbody tr {
+    font-size: 12px; } }
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 25px; }
+  nav#sidebar {
+    display: none; }
+  nav h1 {
+    font-size: 28px;
+    align-self: center; }
+  #search {
+    font-size: 16px;
+    padding: 10px 15px; }
+  .container2 {
+    margin-left: 0;
+    grid-template-columns: 1fr; } }
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr; } }
 
 /*# sourceMappingURL=style.css.map */

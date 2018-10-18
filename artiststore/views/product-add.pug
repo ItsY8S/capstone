@@ -5,7 +5,7 @@ block content
     include sidebar.pug
     .content
       nav.header
-        h1.bold.title Add a Product
+        h1.bold.title Product: Add
 
       form(action="/products/add" method="POST" enctype="multipart/form-data")
         .product-details
@@ -16,7 +16,7 @@ block content
                   input.product-title.live-input(type="text" name="title" placeholder='Product Title' required)
                   input.product-price.live-input(type="text" name="price" placeholder="$" value="$" required)
               .product-description
-                  textarea.autoExpand.live-input(name="description" placeholder="Product Description")
+                  textarea.autoExpand.live-input(name="description" placeholder="Product Description" rows="5")
               .product-buttons
                 select.sizes
                   option Small
