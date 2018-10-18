@@ -1,28 +1,24 @@
 extends layout
 
 block content
-  .container
-    .row.pt-25.fixed
-      .twelve.columns
+  .container2
+    include sidebar.pug
+    .content.manage
+      nav.header
         h1.bold.title Manage
     
-    .row.pt-125
-      .twelve.columns
+      main
         h5.bold Store Information
-
-    .row.pt-25
-      .six.columns
-
         form(autocomplete="off" action="/manage/update" method="POST")
           .input-group
             input(type="text" name="storeName" value=`${user.storeName}` required)
             label(for="store-name") Store Name
             
           .input-group
-            textarea.autoExpand(type="text" name="storeBio" data-min-rows="10" rows="10" required)=user.storeBio
+            textarea.autoExpand(type="text" name="storeBio" data-min-rows="5" rows="5" required)=user.storeBio
             label(for="store-bio") Store Bio
 
-          button.save(type="submit") Save
+          button.save.fixed(type="submit") Save
 
   script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
   script(src="/javascripts/textarea.js")

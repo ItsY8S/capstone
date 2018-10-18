@@ -1,12 +1,13 @@
 extends layout
 
 block content
-  .container
-    .row.pt-25.fixed
-      .twelve.columns
+  .container2
+    include sidebar.pug
+    .content
+      nav.header
         h1.bold.title Concerts
 
-    .row.pt-150
+
       table.u-full-width
         thead.bold
           tr
@@ -24,7 +25,7 @@ block content
               td
                 input.live-input.venue(type="text" name="venue" placeholder="VENUE")
               td
-                button.edit.action(type="submit") ADD
+                button.save.inherit(type="submit") ADD
           if concerts
             each concert in concerts
               tr
@@ -32,5 +33,5 @@ block content
                 td=concert.location
                 td=concert.venue
                 td
-                  button.action
-                    a(href=`/concerts/${concert._id}` alt=`${concert.venue}`).reset-link.edit EDIT
+                  button.edit
+                    a(href=`/concerts/${concert._id}` alt=`${concert.venue}`).reset-link EDIT

@@ -1,15 +1,18 @@
 extends layout
 
 block content
-  .container
-    .row.pt-25.fixed.concert-full
-      .twelve.columns
+  .container2
+    include sidebar.pug
+    .content
+      nav.header
+
+      .concert-full
         img.concert-hero(src="/images/concert-photo.jpg")
         if concert
           h1.bold.title.concert-title=`${concert.venue}`
           h4.bold.title.concert-title(style="top: 110px; text-shadow: 2px 2px 5px #4ab4ff")=`${concert.location}`
 
-    .row.pt-150
+
       table.u-full-width
         thead.bold
           tr

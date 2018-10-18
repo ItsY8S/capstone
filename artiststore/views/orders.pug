@@ -1,13 +1,13 @@
 extends layout
 
 block content
-  .container
-    .row.pt-25.fixed
-      .twelve.columns
+  .container2
+    include sidebar.pug
+    .content.orders
+      nav.header
         h1.bold.title Orders
     
-    .row.pt-150
-      .six.columns
+      main
         h3.bold Unfulfilled
         table.u-full-width
           thead.bold
@@ -78,7 +78,7 @@ block content
               td $55.94
               td Paid | Unfulfilled
 
-      .four.columns
+      aside
         h3 Order #12685
         br
         h5.bold Order Information

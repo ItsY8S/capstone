@@ -6,6 +6,7 @@ body
   margin-left: 253px
 
 nav#sidebar
+  grid-area: sidebar
   position: fixed
   top: 0
   left: 0
@@ -125,6 +126,9 @@ nav#sidebar
 .mt-75
   margin-top: 75px
 
+.mb-0
+  margin-bottom: 0px
+
 .mb-20
   margin-bottom: 20px
 
@@ -175,7 +179,8 @@ table
     font-size: 100px
 
 #search
-    width: 100%
+    width: 200px
+    justify-self: right
     border-radius: 25px
     font-size: 24px
     font-weight: 600
@@ -189,9 +194,6 @@ table
 
 .fixed
   position: fixed
-  background: white
-  width: inherit
-  z-index: 2
 
 .inherit
   position: inherit !important
@@ -227,6 +229,11 @@ button.action
     border-image-outset: 0px
 
 .product-details
+  display: grid
+  grid-template-columns: .75fr .75fr
+  grid-gap: 100px
+
+.product-info
   font-family: Oswald
   display: flex
   flex-direction: column
@@ -236,6 +243,7 @@ button.action
   display: flex
   width: 100%
   justify-content: space-between
+  margin-bottom: 50px
 
 .product-title
   font-weight: bold
@@ -315,11 +323,6 @@ select.sizes
 td
   border-bottom: none
 
-.edit
-  color: #000
-  font-size: 14px
-  line-height: 34px
-
 .live-input
   font-size: 3rem
   border: none !important
@@ -342,7 +345,7 @@ form
   transition: 0.3s all
 	
   .input-group
-    width: 80%
+    width: 100%
     margin: 25px 0
     position: relative
 		
@@ -358,7 +361,7 @@ form
     input, textarea
       min-height: unset
       height: 30px
-      width: 90%
+      width: 100%
       padding: 0
       border: none
       border-bottom: 2px solid #ccc
@@ -388,7 +391,6 @@ form
   overflow: hidden
 
 .save
-  position: fixed
   bottom: 50px
   right: 75px
   background-color: limegreen
@@ -399,6 +401,17 @@ form
 
   &:hover
     color: white
+
+.edit
+  background-color: orange
+  color: white
+  border: none
+  font-size: 16px
+  font-weight: bold
+
+  a
+    &:hover
+      color: white
 
 .delete
   background-color: #ee2e24
@@ -482,3 +495,45 @@ input
   left: 50px
   color: #fff
   text-shadow: 3px 3px 3px #fe5492
+
+
+.container2
+  margin-left: 253px
+  width: 100%
+  all: unset
+  display: grid
+  grid-template-columns: 253px auto
+  grid-template-areas: "sidebar content"
+
+.charts
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 50px
+
+.content
+  width: -webkit-fill-available
+  grid-area: content
+  margin: 0px 50px
+
+.orders
+  display: grid
+  grid-column-gap: 50px
+  grid-template-areas: "header header" "content aside"
+
+.manage
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-column-gap: 50px
+  grid-template-areas: "header header" "content content"
+
+.header
+  background-color: white
+  width: 100%
+  padding-top: 25px
+  display: flex
+  justify-content: space-between
+  margin-bottom: 50px
+  grid-area: header
+
+aside
+  grid-area: aside
