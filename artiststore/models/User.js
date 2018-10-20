@@ -1,13 +1,33 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+var mongoose = require('mongoose')
+var slug = require('mongoose-slug-generator')
+// mongoose.plugin(slug);
+let Schema = mongoose.Schema
 
-let userSchema = new Schema({
-  username: { type: String, required: true, unique: true },
-  password: String,
-  products: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }],
-  storeName: String,
-  storeBio: String
-})
+mongoose.plugin(slug),
+  (Schema = mongoose.Schema),
+  (userSchema = new Schema({
+    username: { type: String, required: true, unique: true },
+    password: String,
+    email: String,
+    products: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }],
+    storeName: String,
+    // storeSlug: String,
+    slug: { type: String, slug: 'storeName' },
+    storeBio: String,
+    image: String
+  }))
+
+// const mongoose = require('mongoose')
+
+// let userSchema = new Schema({
+//   username: { type: String, required: true, unique: true },
+//   password: String,
+//   products: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }],
+//   storeName: String,
+//   storeSlug: String,
+//   storeBio: String,
+//   image: String
+// })
 
 userSchema.statics.findOneOrCreate = function findOneOrCreate(
   condition,

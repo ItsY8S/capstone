@@ -1,0 +1,48 @@
+extends layout
+
+block content
+  .container2
+    include storeSidebar.pug
+    .content
+      nav.header
+        h1.bold.mb-0 Cart
+
+      //- form(action=`/store/${user.slug}/cart/${product}`)
+      main.cart
+        .cart-item
+          table.u-full-width
+            thead
+              th Item
+              th Name
+              th Price
+              th Action
+            tbody
+              if cart
+                each product in products2
+                  tr
+                    td
+                      img.fluid(src=`/uploads/${product.image}` alt=product.title)
+                    td(style="width: 125px")=product.title
+                    td=product.price
+                    td
+                      a(href=`/store/${user.slug}/cart/remove/${product._id}`) Remove
+          hr
+          p.bold Total
+        
+      //- main.cart
+      //-   if products
+      //-     h1=products
+      //-     each product in products
+      //-       .cart-item
+      //-         img.fluid(src=`/uploads/${product.image}` alt=product.title)
+      //-         p=product.title
+      //-         p=product.price
+
+
+        //- if products
+        //-   each product in products
+        //-     .cart-item
+        //-       img.fluid(src=`/uploads/${product.image}` alt=product.title)
+        //-       p=product.title
+        //-       p=product.price
+        //-       //- p=product.title

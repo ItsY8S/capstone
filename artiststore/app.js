@@ -28,6 +28,7 @@ app.use(
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
+    unset: 'destroy',
     store: new MongoStore({ mongooseConnection: db })
   })
 )

@@ -1,6 +1,7 @@
 const productTitle = document.querySelector('.product-title')
 const productPrice = document.querySelector('.product-price')
 const productHero = document.querySelector('.product-hero img')
+const storeImage = document.querySelector('.input-group img')
 const productDescription = document.querySelector('.product-description p')
 
 // productTitle.addEventListener('dblclick', event => {
@@ -45,25 +46,52 @@ const productDescription = document.querySelector('.product-description p')
 //   })
 // }
 
-productHero.addEventListener('click', event => {
-  const itExists = document.querySelector('.exists')
-  console.log(itExists)
-  if (itExists == null) {
-    const productHeroInput = document.createElement('input')
-    productHeroInput.setAttribute('class', 'live-input exists product-hero')
-    productHeroInput.setAttribute('type', 'file')
-    productHeroInput.setAttribute('accept', 'image/png, image/jpeg')
-    productHeroInput.setAttribute('name', 'image')
-    productHeroInput.setAttribute('style', 'display: none')
-    productHeroInput.setAttribute(
-      'onchange',
-      "document.getElementById('hero').src = window.URL.createObjectURL(this.files[0])"
-    )
-    productHero.parentNode.appendChild(productHeroInput)
-    productHeroInput.click()
-  } else {
-    console.log('Still click it doe.')
-    const productHeroInput = document.querySelector('.live-input')
-    productHeroInput.click()
-  }
-})
+if (productHero) {
+  productHero.addEventListener('click', event => {
+    const itExists = document.querySelector('.exists')
+    console.log(itExists)
+    if (itExists == null) {
+      const productHeroInput = document.createElement('input')
+      productHeroInput.setAttribute('class', 'live-input exists product-hero')
+      productHeroInput.setAttribute('type', 'file')
+      productHeroInput.setAttribute('accept', 'image/png, image/jpeg')
+      productHeroInput.setAttribute('name', 'image')
+      productHeroInput.setAttribute('style', 'display: none')
+      productHeroInput.setAttribute(
+        'onchange',
+        "document.getElementById('hero').src = window.URL.createObjectURL(this.files[0])"
+      )
+      productHero.parentNode.appendChild(productHeroInput)
+      productHeroInput.click()
+    } else {
+      console.log('Still click it doe.')
+      const productHeroInput = document.querySelector('.live-input')
+      productHeroInput.click()
+    }
+  })
+}
+
+if (storeImage) {
+  storeImage.addEventListener('click', event => {
+    const itExists = document.querySelector('.exists')
+    console.log(itExists)
+    if (itExists == null) {
+      const storeImageInput = document.createElement('input')
+      storeImageInput.setAttribute('class', 'live-input exists product-hero')
+      storeImageInput.setAttribute('type', 'file')
+      storeImageInput.setAttribute('accept', 'image/png, image/jpeg')
+      storeImageInput.setAttribute('name', 'storeImage')
+      storeImageInput.setAttribute('style', 'display: none')
+      storeImageInput.setAttribute(
+        'onchange',
+        "document.getElementById('hero').src = window.URL.createObjectURL(this.files[0])"
+      )
+      storeImage.parentNode.appendChild(storeImageInput)
+      storeImageInput.click()
+    } else {
+      console.log('Still click it doe.')
+      const storeImageInput = document.querySelector('.live-input')
+      storeImageInput.click()
+    }
+  })
+}

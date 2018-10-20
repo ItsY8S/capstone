@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  .container2
+    include storeSidebar.pug
+    .content
+      nav.header
+        h1.bold.mb-0 Contact
+        
+      main.contact
+        form#contact-form(action=`mailto:${user.email}` method="POST" enctype="text/plain" autocomplete="off")
+          .input-group
+            input(type="text" name="name" required)
+            label(for="storeName") Name
+
+          .input-group
+            input(type="text" name="email" required)
+            label(for="email") Email
+              
+          .input-group
+            textarea.autoExpand(type="text" name="comment" data-min-rows="10" rows="10" required)
+            label(for="comment") Comment
+
+          button.save.inherit(type="submit") Send Email

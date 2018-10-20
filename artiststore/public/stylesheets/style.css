@@ -286,6 +286,8 @@ select.sizes {
 .reset-link {
   color: white;
   text-decoration: none; }
+  .reset-link:hover {
+    color: white; }
 
 td {
   border-bottom: none; }
@@ -368,7 +370,9 @@ form {
   border: none;
   font-size: 16px;
   font-weight: bold; }
-  .edit a:hover {
+  .edit:hover, .edit:visited, .edit:active, .edit:focus {
+    color: white; }
+  .edit a:hover, .edit a:visited, .edit a:active, .edit a:focus {
     color: white; }
 
 .delete {
@@ -469,7 +473,7 @@ input:-webkit-autofill {
 .orders {
   display: grid;
   grid-column-gap: 50px;
-  grid-template-areas: "header header" "content aside"; }
+  grid-template-columns: 1fr 1fr; }
 
 .manage {
   display: grid;
@@ -489,6 +493,18 @@ input:-webkit-autofill {
 aside {
   grid-area: aside; }
 
+#contact-form {
+  width: 400px;
+  margin: 0; }
+
+.cart-item {
+  width: 350px;
+  text-align: center; }
+  .cart-item td {
+    width: 75px; }
+  .cart-item p {
+    margin-bottom: 0; }
+
 @media (min-width: 0px) and (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr 1fr;
@@ -504,7 +520,8 @@ aside {
     padding: 10px 15px; }
   .container2 {
     margin-left: 0;
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "content"; }
   .content {
     margin: 0px 25px 25px; }
   .product-details {
@@ -523,7 +540,13 @@ aside {
   table thead tr {
     font-size: 14px; }
   table tbody tr {
-    font-size: 12px; } }
+    font-size: inherit; }
+    table tbody tr button.edit {
+      font-size: 12px;
+      padding: 0 10px; }
+  .orders {
+    grid-column-gap: 0;
+    grid-template-columns: 1fr; } }
 
 @media (min-width: 600px) and (max-width: 900px) {
   .grid {
@@ -539,10 +562,15 @@ aside {
     padding: 10px 15px; }
   .container2 {
     margin-left: 0;
+    grid-template-columns: 1fr; }
+  .orders {
     grid-template-columns: 1fr; } }
 
 @media (min-width: 900px) and (max-width: 1200px) {
   .grid {
-    grid-template-columns: 1fr 1fr 1fr; } }
+    grid-template-columns: 1fr 1fr 1fr; }
+  .orders {
+    grid-column-gap: 0;
+    grid-template-areas: "header header" "sidebar content"; } }
 
 /*# sourceMappingURL=style.css.map */

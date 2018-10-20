@@ -322,6 +322,9 @@ select.sizes
   color: white
   text-decoration: none
 
+  &:hover
+    color: white
+
 td
   border-bottom: none
 
@@ -411,8 +414,11 @@ form
   font-size: 16px
   font-weight: bold
 
+  &:hover, &:visited, &:active, &:focus
+    color: white
+
   a
-    &:hover
+    &:hover, &:visited, &:active, &:focus
       color: white
 
 .delete
@@ -520,7 +526,7 @@ input
 .orders
   display: grid
   grid-column-gap: 50px
-  grid-template-areas: "header header" "content aside"
+  grid-template-columns: 1fr 1fr
 
 .manage
   display: grid
@@ -539,6 +545,20 @@ input
 
 aside
   grid-area: aside
+
+#contact-form
+  width: 400px
+  margin: 0
+
+.cart-item
+  width: 350px
+  text-align: center
+
+  td
+    width: 75px
+
+  p
+    margin-bottom: 0
 
 
 $breakpoint-phone: 600px
@@ -565,6 +585,7 @@ $breakpoint-desktop: 1200px
   .container2
     margin-left: 0
     grid-template-columns: 1fr
+    grid-template-areas: "header" "content"
 
   .content
     margin: 0px 25px 25px
@@ -579,7 +600,6 @@ $breakpoint-desktop: 1200px
   .product-description textarea
     max-width: 100%
     width: 100%
-    // min-height: 300px !important
     word-break: break-all
   
   .header
@@ -595,7 +615,15 @@ $breakpoint-desktop: 1200px
 
     tbody
       tr
-        font-size: 12px
+        font-size: inherit
+
+        button.edit
+          font-size: 12px
+          padding: 0 10px
+
+  .orders
+    grid-column-gap: 0
+    grid-template-columns: 1fr
 
 @media (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet)
   .grid
@@ -617,8 +645,13 @@ $breakpoint-desktop: 1200px
     margin-left: 0
     grid-template-columns: 1fr
 
-  
+  .orders
+    grid-template-columns: 1fr
 
 @media (min-width:$breakpoint-tablet) and (max-width: $breakpoint-desktop)
   .grid
     grid-template-columns: 1fr 1fr 1fr
+
+  .orders
+    grid-column-gap: 0
+    grid-template-areas: "header header" "sidebar content"

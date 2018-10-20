@@ -3,92 +3,85 @@ extends layout
 block content
   .container2
     include sidebar.pug
-    .content.orders
+    .content
       nav.header
         h1.bold.title Orders
     
-      main
-        h3.bold Unfulfilled
-        table.u-full-width
-          thead.bold
-            tr
-              th Order #
-              th Customer
-              th Ordered
-              th Total
-              th Status
-          tbody
-            tr
-              td #12685
-              td John Smith
-              td 10-13-18
-              td $79.88
-              td Paid | Unfulfilled
-            tr
-              td #12686
-              td Terry Jones
-              td 10-13-18
-              td $22.06
-              td Paid | Unfulfilled
-            tr
-              td #12687
-              td Jessica Ray
-              td 10-13-18
-              td $19.98
-              td Paid | Unfulfilled
-            tr
-              td #12687
-              td Megan Holt
-              td 10-13-18
-              td $55.94
-              td Paid | Unfulfilled
+      main.orders
+        .unfulfilled
+          h3.bold Unfulfilled
+          table.u-full-width
+            thead.bold
+              tr
+                th Order
+                th Total
+                th Status
+                th Action
+            tbody
+              tr
+                td #12685
+                td $79.88
+                td Unfulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
+              tr
+                td #12686
+                td $22.06
+                td Unfulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
+              tr
+                td #12687
+                td $19.98
+                td Unfulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
+              tr
+                td #12687
+                td $55.94
+                td Unfulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
 
-        h3.bold Fulfilled
-        table.u-full-width
-          thead.bold
-            tr
-              th Order #
-              th Customer
-              th Date Ordered
-              th Total
-              th Status
-          tbody
-            tr
-              td #12685
-              td John Smith
-              td 10-13-18
-              td $79.88
-              td Paid | Unfulfilled
-            tr
-              td #12686
-              td Terry Jones
-              td 10-13-18
-              td $22.06
-              td Paid | Unfulfilled
-            tr
-              td #12687
-              td Jessica Ray
-              td 10-13-18
-              td $19.98
-              td Paid | Unfulfilled
-            tr
-              td #12687
-              td Megan Holt
-              td 10-13-18
-              td $55.94
-              td Paid | Unfulfilled
-
-      aside
-        h3 Order #12685
-        br
-        h5.bold Order Information
-        ul Items:
-          li 199X FLEECE PULLOVER HOOD 
-          li SPONSORED COLLARED LONGSLEEVE RUGBY
-        p Quanity
-        p Price
-        p Status
-        br
-        h5.bold Customer Information
-        p John Smith
-        p 123 Loop Lane
+        .fulfilled
+          h3.bold Fulfilled
+          table.u-full-width
+            thead.bold
+              tr
+                th Order
+                th Total
+                th Status
+                th Action
+            tbody
+              tr
+                td #12685
+                td $79.88
+                td Fulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
+              tr
+                td #12686
+                td $22.06
+                td Fulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
+              tr
+                td #12687
+                td $19.98
+                td Fulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
+              tr
+                td #12687
+                td $55.94
+                td Fulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)

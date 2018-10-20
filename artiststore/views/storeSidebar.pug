@@ -7,18 +7,14 @@ block sidebar
 
     ul
       li#selected
-        a(href="/") Dashboard
+        a(href=`/store/${user.slug}`) Products
       li
-        a(href="/products") Products
+        a(href=`/store/${user.slug}/concerts`) Concerts
       li
-        a(href="/orders") Orders
-      li
-        a(href="/concerts") Concerts
-      li
-        a(href="/manage") Manage
+        a(href=`/store/${user.slug}/contact`) Contact
 
     ul#logout
       li
-        a(href="/logout") Logout
+        a(href=`/store/${user.slug}/cart`) Cart
 
     span.divider
