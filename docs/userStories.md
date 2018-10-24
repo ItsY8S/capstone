@@ -1,4 +1,4 @@
-### User Stories
+## User Stories
 
 **As an artist, I want to sign up with my email.**
 System will allow user to create an account authenticate with Google OAuth.
@@ -17,6 +17,6 @@ System will allow user to mark products as concert exclusive & associate them wi
 
 **As an artist, I want to add ...**
 
-### Demographics
+## Demographics
 
 Ages: 16-25
