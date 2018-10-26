@@ -74,6 +74,15 @@ Connecting with artists on Instagram will hit a specific market that those websi
 >   - The system will `create orders when a user checks out`.
 >   - The system will `allow the user to change the status of orders`.
 
+> - As a `customer`, I want to `view my cart`, so that I can `review my items`.
+>   - The system will `allow the user to view items in cart before checking out`.
+>   - The system will `display the total of all items in the cart`.
+
+> - As a `customer`, I want to `checkout`, so that I can `make a purchase`.
+>   - The system will `have form inputs to handle shipping`.
+>   - The system will `allow the user to pay using Stripe`.
+>   - The system will `store the order in a database`.
+
 > - As a `fan`, I want to `know when my favorite artist is performing`, so that `I can go to their concert`.
 >   - The system will `display concerts sorted by the nearest date`.
 
