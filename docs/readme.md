@@ -58,8 +58,6 @@ Connecting with artists on Instagram will hit a specific market that those websi
 
 ## 1.5. User Stories & Functional Requirements (Features)
 
-> - As a `Persona`, I want to `need`, so that `purpose`.
-
 > - As an `artist`, I want to `sign up with my email`, so that `I don't have to remember more login credentials`.
 >   - The system will `allow user to create an account & authenticate with Google OAuth`.
 
@@ -71,7 +69,10 @@ Connecting with artists on Instagram will hit a specific market that those websi
 
 > - As an `artist`, I want to `manage my orders`, so that `I can fulfill orders on my own`.
 >   - The system will `create orders when a user checks out`.
->   - The system will `allow the user to change the status of orders`.
+>   - The system will `allow user to change the status of orders`.
+
+> - As an `artist`, I want to `update my store information`, so that `fans can contact me`.
+>   - The system will `allow user to edit store details including store name and contact information`.
 
 > - As a `customer`, I want to `view my cart`, so that I can `review my items`.
 >   - The system will `allow the user to view items in cart before checking out`.
