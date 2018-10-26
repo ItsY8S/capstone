@@ -1,0 +1,57 @@
+extends layout
+
+block content
+  .container
+    .row.pt-25.fixed
+      .twelve.columns
+        h1.bold.title Edit: PRODUCT NAME
+
+    .row.pt-150.flex
+      .six.columns
+        .product-hero
+          img.fluid(src="/images/products/teal-hoodie.png" alt="PRODUCT NAME HERE")
+      .five.columns.offset-by-one.flex(style="position: relative")
+        .product-details
+          .title-and-price
+            h4.product-title Kiss Land Skyline Fleece Pullover Hoodie
+            h4.product-price.bold $78
+          .product-description.mt-25
+            p DESIGNED BY XO. KISS LAND VINTAGE GREEN HEAVYWEIGHT COTTON FLEECE PULLOVER HOODIE FEATURING SKYLINE WRITING AND JAPANESE 5 LOGO ON BACK. MACHINE WASH COLD, DELICATE CYCLE, TUMBLE DRY LOW. DO NOT IRON EMBELLISHMENT. 100% COTTON FLEECE. GARMENT MADE IN CHINA, EMBELLISHED IN USA.
+          .product-buttons
+            select.sizes
+              option Small
+              option Medium
+              option Large
+            button.btn.action Edit
+
+    .row.mt-7-5
+      .six.columns
+        .grid
+          img.fluid
+          img.fluid(src="/images/products/teal-hoodie.png" alt="PRODUCT NAME HERE")
+          img.fluid.opacity-50(src="/images/products/teal-hoodie.png" alt="PRODUCT NAME HERE")
+
+
+    .row.mt-75
+      .twelve.columns
+        h2.bold Related
+    
+    .row.mt-35
+      .twelve.columns
+        .grid
+          a(href="/products/teal-hoodie")
+            .item
+              img.fluid(src="/images/products/red-hoodie.jpg" alt="Related Product: Red Hoodie")
+          a(href="/products/longsleeve-overdose")
+            .item
+              img.fluid(src="/images/products/longsleeve-overdose.jpg" alt="Related Product: Longsleeve Overdose")
+              button.sold-out.badge Sold Out!
+          a(href="/products/orange-hoodie")
+            .item
+              img.fluid(src="/images/products/orange-hoodie.png" alt="Related Product: Orange Hoodie")
+          a(href="/products/beige-hoodie")
+            .item
+              img.fluid(src="/images/products/beige-hoodie.jpg" alt="Related Product: Beige Hoodie")
+
+
+  script(src="/javascripts/edit.js")
