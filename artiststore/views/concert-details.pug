@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  .container2
+    include sidebar.pug
+    .content
+      nav.header
+
+      .concert-full
+        img.concert-hero(src="/images/concert-photo.jpg")
+        if concert
+          h1.bold.title.concert-title=`${concert.venue}`
+          h4.bold.title.concert-title(style="top: 110px; text-shadow: 2px 2px 5px #4ab4ff")=`${concert.location}`
+
+
+      table.u-full-width
+        thead.bold
+          tr
+            th DATE
+            th LOCATION
+            th VENUE
+            th TICKETS
+        tbody
+          form(action="/concerts/add" method="POST")
+            tr
+              td
+                input.live-input.date(type="text" name="date" placeholder="DATE")
+              td
+                input.live-input.location(type="text" name="location" placeholder="LOCATION")
+              td
+                input.live-input.venue(type="text" name="venue" placeholder="VENUE")
+              td
+                button.edit.action(type="submit") ADD
+          if concert
+            h1 wow
+            input.live-input(type="text" placeholder="Add a description")
