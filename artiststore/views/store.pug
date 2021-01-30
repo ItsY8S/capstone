@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .container2
+    include storeSidebar.pug
+    .content
+      nav.header
+        h1.bold.mb-0 Products
+        input#search.mb-0(type="search" name="search" placeholder="Search...")
+        
+      .grid
+        each product in products
+          .item
+            a(href=`/store/${user.slug}/products/${product._id}`)
+              img.fluid(src=`/uploads/${product.image}` alt=product.title)

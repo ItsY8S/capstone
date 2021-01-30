@@ -1,0 +1,20 @@
+block sidebar
+  nav#sidebar
+    if user
+      img#profile-picture(src=`/uploads/${user.image}`)
+    else
+      img#profile-picture(src='/images/theweeknd.jpg')
+
+    ul
+      li#selected
+        a(href=`/store/${user.slug}`) Products
+      li
+        a(href=`/store/${user.slug}/concerts`) Concerts
+      li
+        a(href=`/store/${user.slug}/contact`) Contact
+
+    ul#logout
+      li
+        a(href=`/store/${user.slug}/cart`) Cart
+
+    span.divider

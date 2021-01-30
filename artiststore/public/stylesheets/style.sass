@@ -6,6 +6,7 @@ body
   margin-left: 253px
 
 nav#sidebar
+  grid-area: sidebar
   position: fixed
   top: 0
   left: 0
@@ -125,8 +126,14 @@ nav#sidebar
 .mt-75
   margin-top: 75px
 
+.mb-0
+  margin-bottom: 0px
+
 .mb-20
   margin-bottom: 20px
+
+.mb-50
+  margin-bottom: 50px
 
 .pt-25
   padding-top: 25px
@@ -172,7 +179,8 @@ table
     font-size: 100px
 
 #search
-    width: 100%
+    width: 200px
+    justify-self: right
     border-radius: 25px
     font-size: 24px
     font-weight: 600
@@ -186,12 +194,13 @@ table
 
 .fixed
   position: fixed
-  background: white
-  width: inherit
-  z-index: 2
+
+.inherit
+  position: inherit !important
 
 .item
   position: relative
+  align-self: center
 
 button.badge
   border: 1.75px solid black
@@ -221,6 +230,11 @@ button.action
     border-image-outset: 0px
 
 .product-details
+  display: grid
+  grid-template-columns: .75fr .75fr
+  grid-gap: 100px
+
+.product-info
   font-family: Oswald
   display: flex
   flex-direction: column
@@ -230,20 +244,27 @@ button.action
   display: flex
   width: 100%
   justify-content: space-between
+  margin-bottom: 50px
 
 .product-title
   font-weight: bold
   text-transform: uppercase
   width: 85%
   cursor: pointer
+  margin: 0
 
 .product-price
   text-align: right
   font-weight: bold
   width: 100px
+  margin: 0
+
+.price
+  font-size: 30px
 
 .product-hero
   cursor: pointer
+  align-self: center
 
 .product-description
   color: rgba(39, 39, 39, 0.75)
@@ -251,6 +272,13 @@ button.action
   font-size: 16px
   flex-grow: 1
   cursor: pointer
+  
+  textarea
+    width: 100%
+    height: 250px
+    resize: none
+    font-size: 16px
+    letter-spacing: 0px
 
 .product-buttons
   display: flex
@@ -294,13 +322,11 @@ select.sizes
   color: white
   text-decoration: none
 
+  &:hover
+    color: white
+
 td
   border-bottom: none
-
-.edit
-  color: #000
-  font-size: 14px
-  line-height: 34px
 
 .live-input
   font-size: 3rem
@@ -317,15 +343,15 @@ form
   flex-direction: column
   margin: 0 auto
   justify-content: center
-  min-width: 300px
+  // min-width: 300px
   background-color: transparent
   align-self: center
   z-index: 2
   transition: 0.3s all
 	
   .input-group
-    width: 80%
-    margin: 15px 0
+    width: 100%
+    margin: 25px 0
     position: relative
 		
     label
@@ -340,7 +366,7 @@ form
     input, textarea
       min-height: unset
       height: 30px
-      width: 90%
+      width: 100%
       padding: 0
       border: none
       border-bottom: 2px solid #ccc
@@ -370,11 +396,10 @@ form
   overflow: hidden
 
 .save
-  position: fixed
   bottom: 50px
   right: 75px
   background-color: limegreen
-  color: white
+  color: white !important
   border: none
   font-size: 16px
   font-weight: bold
@@ -382,5 +407,251 @@ form
   &:hover
     color: white
 
+.edit
+  background-color: orange
+  color: white
+  border: none
+  font-size: 16px
+  font-weight: bold
+
+  &:hover, &:visited, &:active, &:focus
+    color: white
+
+  a
+    &:hover, &:visited, &:active, &:focus
+      color: white
+
+.delete
+  background-color: #ee2e24
+  font-size: 16px
+  font-weight: bold
+  border: none
+
+  a
+    color: white
+    text-decoration: none
+
 .align-self-center
   align-self: center
+
+body.login
+  display: flex
+  // background: linear-gradient(to bottom right, #55bbe9 0%, #5597e9 10%, #5561e9 20%, #5d55e9 35%, #8a55ea 40%, #a757e9 80%, #d256e9 100%)
+  background: linear-gradient(to right, #55bbe9 0%, #5d55e9 50%, #d256e9 100%)
+  width: 100%
+  height: 100vh
+
+form.card
+  // width: 320px
+  position: relative
+  box-sizing: border-box
+  background-color: transparent
+  border-radius: 20px
+  padding: 50px 100px
+
+.white
+  background-color: #fff
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  border-radius: 20px
+  z-index: -2
+
+.text-black
+  color: black
+
+.full-width
+  width: 100% !important
+
+button.gradient
+  background: linear-gradient(to left, #55bbe9 0%, #5d55e9 50%, #d256e9 100%)
+  color: white
+  font-size: 20px
+  border: none
+  border-radius: 5px
+  transition: .3s
+
+  &:hover
+    border: none
+    border-radius: 10px
+
+  &:focus
+    border: 1px solid #ccc
+    box-sizing: border-box
+
+input
+  &:-webkit-autofill
+    background-color: #fff !important
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset
+
+.concert-full
+  padding: 0px
+  max-height: 400px !important
+  min-width: 100%
+
+.concert-hero
+  width: 100%
+  max-height: 300px
+  object-fit: cover
+  object-position: 0px -420px
+
+.concert-title
+  position: absolute
+  top: 50px
+  left: 50px
+  color: #fff
+  text-shadow: 3px 3px 3px #fe5492
+
+
+.container2
+  margin-left: 253px
+  width: 100%
+  all: unset
+  display: grid
+  grid-template-columns: 253px auto
+  grid-template-areas: "sidebar content"
+
+.charts
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 50px
+
+.content
+  width: -webkit-fill-available
+  grid-area: content
+  margin: 0px 50px
+
+.orders
+  display: grid
+  grid-column-gap: 50px
+  grid-template-columns: 1fr 1fr
+
+.manage
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-column-gap: 50px
+  grid-template-areas: "header header" "content content"
+
+.header
+  background-color: white
+  width: 100%
+  padding-top: 25px
+  display: flex
+  justify-content: space-between
+  margin-bottom: 50px
+  grid-area: header
+
+aside
+  grid-area: aside
+
+#contact-form
+  width: 400px
+  margin: 0
+
+.cart-item
+  width: 350px
+  text-align: center
+
+  td
+    width: 75px
+
+  p
+    margin-bottom: 0
+
+
+$breakpoint-phone: 600px
+$breakpoint-tablet: 900px
+$breakpoint-desktop: 1200px
+
+@media (min-width: 0px) and (max-width: $breakpoint-phone)
+  .grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 25px
+
+  nav#sidebar
+    display: none
+
+  nav h1
+    font-size: 24px
+    align-self: center
+
+  #search
+    width: 150px
+    font-size: 20px
+    padding: 10px 15px
+    
+  .container2
+    margin-left: 0
+    grid-template-columns: 1fr
+    grid-template-areas: "header" "content"
+
+  .content
+    margin: 0px 25px 25px
+
+  .product-details
+    grid-template-columns: 1fr
+    grid-gap: 50px
+
+  .title-and-price
+    margin-bottom: 25px
+
+  .product-description textarea
+    max-width: 100%
+    width: 100%
+    word-break: break-all
+  
+  .header
+    margin-bottom: 25px
+
+  .charts
+    grid-template-columns: 1fr
+
+  table
+    thead
+      tr
+        font-size: 14px
+
+    tbody
+      tr
+        font-size: inherit
+
+        button.edit
+          font-size: 12px
+          padding: 0 10px
+
+  .orders
+    grid-column-gap: 0
+    grid-template-columns: 1fr
+
+@media (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet)
+  .grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-gap: 25px
+
+  nav#sidebar
+    display: none
+
+  nav h1
+    font-size: 28px
+    align-self: center
+
+  #search
+    font-size: 16px
+    padding: 10px 15px
+
+  .container2
+    margin-left: 0
+    grid-template-columns: 1fr
+
+  .orders
+    grid-template-columns: 1fr
+
+@media (min-width:$breakpoint-tablet) and (max-width: $breakpoint-desktop)
+  .grid
+    grid-template-columns: 1fr 1fr 1fr
+
+  .orders
+    grid-column-gap: 0
+    grid-template-areas: "header header" "sidebar content"

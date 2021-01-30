@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  .container2
+    include storeSidebar.pug
+    .content
+      nav.header
+        h1.bold.title Concerts
+
+
+      table.u-full-width
+        thead.bold
+          tr
+            th DATE
+            th LOCATION
+            th VENUE
+            th TICKETS
+        tbody
+          if concerts
+            each concert in concerts
+              tr
+                td=concert.date
+                td=concert.location
+                td=concert.venue
+                td
+                  button.save
+                    a(href=`/concerts/${concert._id}` alt=`${concert.venue}`).reset-link Tickets

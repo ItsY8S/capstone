@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .container2
+    include sidebar.pug
+    .content
+      nav.header
+        h1.bold.title Product: Add
+
+      form(action="/products/add" method="POST" enctype="multipart/form-data")
+        .product-details
+            .product-hero
+              img#hero.fluid(src="/images/camera-icon.svg" alt="Add Product Image")
+            .product-info
+              .title-and-price
+                  input.product-title.live-input(type="text" name="title" placeholder='Product Title' required)
+                  input.product-price.live-input(type="text" name="price" placeholder="$" value="$" required)
+              .product-description
+                  textarea.autoExpand.live-input(name="description" placeholder="Product Description" rows="5")
+              .product-buttons
+                select.sizes
+                  option Small
+                  option Medium
+                  option Large
+                button.inherit.save(type="submit") Add
+
+                
+
+  script(src="/javascripts/textarea.js")
+  script(src="/javascripts/edit.js")

@@ -1,6 +1,9 @@
 block sidebar
   nav#sidebar
-    img#profile-picture(src='/images/theweeknd.jpg')
+    if user
+      img#profile-picture(src=`/uploads/${user.image}`)
+    else
+      img#profile-picture(src='/images/theweeknd.jpg')
 
     ul
       li#selected
@@ -15,6 +18,7 @@ block sidebar
         a(href="/manage") Manage
 
     ul#logout
-      li Logout
+      li
+        a(href="/logout") Logout
 
     span.divider

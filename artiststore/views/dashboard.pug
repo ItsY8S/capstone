@@ -1,28 +1,25 @@
 extends layout
 
 block content
-  .container
-    .row.pt-25.fixed
-      .twelve.columns
+  .container2
+    include sidebar.pug
+    .content
+      nav.header
         h1.bold.title Dashboard
 
-    .row.pt-150
-      .six.columns
-        h3.bold Sales
-        img.fluid(src="/images/Chart 1.png" alt="Sales Bar Chart")
+      main
+        .charts
+          .sales
+            h3.bold Sales
+            img.fluid(src="/images/Chart 1.png" alt="Sales Bar Chart")
 
-      .six.columns
-        h3.bold Traffic
-        img.fluid(src="/images/Chart 2.png" alt="Traffic Bar Chart")
+          .traffic
+            h3.bold Traffic
+            img.fluid(src="/images/Chart 2.png" alt="Traffic Bar Chart")
 
-    .row.mt-50.flex
-      .six.columns
-        h3.bold.mb-0 Recent Orders
-      .two.columns.offset-by-four.align-self-center
-        h5.bold.mb-0 Filter
-
-    .row
-      .twelve.columns
+        .mt-50.flex
+          h3.bold.mb-0 Recent Orders
+            
         table.u-full-width
           thead.bold
             tr

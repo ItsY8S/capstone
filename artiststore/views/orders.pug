@@ -1,7 +1,87 @@
 extends layout
 
 block content
-  .container
-    .row.pt-25.fixed
-      .twelve.columns
+  .container2
+    include sidebar.pug
+    .content
+      nav.header
         h1.bold.title Orders
+    
+      main.orders
+        .unfulfilled
+          h3.bold Unfulfilled
+          table.u-full-width
+            thead.bold
+              tr
+                th Order
+                th Total
+                th Status
+                th Action
+            tbody
+              tr
+                td #12685
+                td $79.88
+                td Unfulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
+              tr
+                td #12686
+                td $22.06
+                td Unfulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
+              tr
+                td #12687
+                td $19.98
+                td Unfulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
+              tr
+                td #12687
+                td $55.94
+                td Unfulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
+
+        .fulfilled
+          h3.bold Fulfilled
+          table.u-full-width
+            thead.bold
+              tr
+                th Order
+                th Total
+                th Status
+                th Action
+            tbody
+              tr
+                td #12685
+                td $79.88
+                td Fulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
+              tr
+                td #12686
+                td $22.06
+                td Fulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
+              tr
+                td #12687
+                td $19.98
+                td Fulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
+              tr
+                td #12687
+                td $55.94
+                td Fulfilled
+                td
+                  button.edit Manage
+                    a(href=`/orders/orderID`)
