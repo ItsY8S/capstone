@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i|Oswald:400,600" rel="stylesheet")
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/skeleton.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body.login
+    form.card(action="/signup" method="POST" autocomplete="off")
+      h2.mb-50 Artist Store
+      .white &nbsp;
+      .input-group.full-width
+        input.full-width(type="text" name="username" autofocus required)
+        label.text-black(for="username") Username
+      .input-group.full-width
+        input.full-width(type="password" name="password" required)
+        label(for="password") Password
+      button.gradient.btn(type="submit" value="Log In") Sign Up
+      p.mt-25 Have an account? &nbsp;
+        a(href="/login") Login

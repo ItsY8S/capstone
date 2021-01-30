@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  .container2
+    include sidebar.pug
+    .content
+      nav.header
+        h1.bold.title Concerts
+
+
+      table.u-full-width
+        thead.bold
+          tr
+            th DATE
+            th LOCATION
+            th VENUE
+            th TICKETS
+        tbody
+          form(action="/concerts/add" method="POST")
+            tr
+              td
+                input.live-input.date(type="text" name="date" placeholder="DATE")
+              td
+                input.live-input.location(type="text" name="location" placeholder="LOCATION")
+              td
+                input.live-input.venue(type="text" name="venue" placeholder="VENUE")
+              td
+                button.save.inherit(type="submit") ADD
+          if concerts
+            each concert in concerts
+              tr
+                td=concert.date
+                td=concert.location
+                td=concert.venue
+                td
+                  button.edit
+                    a(href=`/concerts/${concert._id}` alt=`${concert.venue}`).reset-link EDIT

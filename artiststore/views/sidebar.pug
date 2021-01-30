@@ -1,0 +1,24 @@
+block sidebar
+  nav#sidebar
+    if user
+      img#profile-picture(src=`/uploads/${user.image}`)
+    else
+      img#profile-picture(src='/images/theweeknd.jpg')
+
+    ul
+      li#selected
+        a(href="/") Dashboard
+      li
+        a(href="/products") Products
+      li
+        a(href="/orders") Orders
+      li
+        a(href="/concerts") Concerts
+      li
+        a(href="/manage") Manage
+
+    ul#logout
+      li
+        a(href="/logout") Logout
+
+    span.divider

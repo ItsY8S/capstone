@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .container2
+    include storeSidebar.pug
+    .content
+      nav.header
+        h1.bold.mb-0 Product Details
+        input#search.mb-0(type="search" name="search" placeholder="Search...")
+      
+      form(action=`/store/${user.slug}/products/${product._id}` method="POST")
+        .product-details
+          .product-hero
+            if product.image
+              img#hero.fluid(src=`/uploads/${product.image}` alt=product.title)
+        
+          .product-info
+            .title-and-price
+              h4.product-title=product.title
+              h4.product-price=product.price
+
+            .product-description
+              textarea.autoExpand.live-input(name="description" placeholder="Product Description" rows="5" readonly)=product.description
+            .product-buttons
+              select.sizes
+                option Small
+                option Medium
+                option Large
+
+              button.inherit.save(type="submit") Add to Cart

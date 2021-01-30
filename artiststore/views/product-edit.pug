@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  .container2
+    include sidebar.pug
+    .content
+      nav.header
+        h1.bold.title Products: Edit
+
+      form(action=`/products/edit/${product._id}` method="POST" enctype="multipart/form-data")
+        .product-details
+          .product-hero
+            if product.image
+              img#hero.fluid(src=`/uploads/${product.image}` alt=product.title)
+            else
+              img#hero.fluid(src="/images/camera-icon.svg" alt="Add Product Image")
+        
+          .product-info
+            .title-and-price
+              input.product-title.live-input(type="text" name="title" placeholder="Product Title" value=product.title)
+
+              input.product-price.live-input(type="text" name="price" placeholder="$" value=product.price)
+
+            .product-description
+              textarea.autoExpand.live-input(name="description" placeholder="Product Description" rows="5")=product.description
+            .product-buttons
+              button.delete
+                a(href=`/products/delete/${product._id}`) Delete
+              button.inherit.save(type="submit") Save
+
+  script(src="/javascripts/edit.js")
